@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   description: 'Your Wealth. Your Business. No Bank. No PAN. No Aadhaar. Track your investments with complete privacy.',
   keywords: 'investment tracker, wealth management, privacy-first, portfolio tracker',
   icons: {
-    icon: '/logos/favicon.png',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 
