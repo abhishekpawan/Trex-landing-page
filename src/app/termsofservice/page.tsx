@@ -38,7 +38,7 @@ export default function TermsOfService() {
                 transition={{ delay: 0.1 }}
                 className="text-[#F1F5F9]/80 leading-relaxed text-lg"
               >
-                These Terms of Service ("Terms") govern your use of the TREX Android application operated by Novarex Studios.
+                These Terms of Service (&quot;Terms&quot;) govern your use of the TREX Android application operated by Novarex Studios.
               </motion.p>
 
               <motion.p
@@ -111,7 +111,7 @@ export default function TermsOfService() {
                   user-entered data.
                 </p>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  It does not provide "investment advice" as defined under SEBI regulations
+                  It does not provide &quot;investment advice&quot; as defined under SEBI regulations
                   or any other regulatory framework.
                 </p>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
@@ -137,7 +137,7 @@ export default function TermsOfService() {
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
                   Users may delete their account and associated data directly within the App.
                   Users may also request account deletion by contacting us via the email
-                  listed in this document, in accordance with Google Play's User Data
+                  listed in this document, in accordance with Google Play&apos;s User Data
                   Deletion policy.
                 </p>
               </motion.section>
@@ -155,7 +155,7 @@ export default function TermsOfService() {
                   You retain ownership of all data you enter.
                 </p>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  By using the App, you grant us permission to store and process your data solely to provide the App's functionality.
+                  By using the App, you grant us permission to store and process your data solely to provide the App&apos;s functionality.
                 </p>
               </motion.section>
 
@@ -194,7 +194,7 @@ export default function TermsOfService() {
                   To the maximum extent permitted by law:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>The App is provided "as is"</li>
+                  <li>The App is provided &quot;as is&quot;</li>
                   <li>We are not liable for financial losses, data inaccuracies, or indirect damages arising from use of the App</li>
                 </ul>
               </motion.section>

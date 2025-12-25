@@ -92,7 +92,7 @@ export default function AudienceAudit() {
           className="mt-16 text-center"
         >
           <p className="text-[#6FAF9E] font-bold text-xl md:text-2xl tracking-tight opacity-90">
-            "Trex doesn't make decisions for you. It makes your decisions clearer."
+            &quot;Trex doesn&apos;t make decisions for you. It makes your decisions clearer.&quot;
           </p>
         </motion.div>
       </div>
