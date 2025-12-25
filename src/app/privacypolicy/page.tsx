@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
                 transition={{ delay: 0.1 }}
                 className="text-[#F1F5F9]/80 leading-relaxed text-lg"
               >
-                Novarex Studios ("we", "our", or "us") operates the TREX Android application (the "App").
+                Novarex Studios (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates the TREX Android application (the &quot;App&quot;).
               </motion.p>
 
               <motion.p
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
                       <li>Any optional information you choose to add inside the app</li>
                     </ul>
                     <p className="text-[#F1F5F9]/80 leading-relaxed mt-3">
-                      This data is entered by you and stored only to provide the App's functionality.
+                      This data is entered by you and stored only to provide the App&apos;s functionality.
                     </p>
                   </div>
 
@@ -249,7 +249,7 @@ export default function PrivacyPolicy() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  7. Children's Privacy
+                  7. Children&apos;s Privacy
                 </h2>
                 <p className="text-[#F1F5F9]/80 leading-relaxed">
                   The App is not intended for children under the age of 13.
@@ -283,7 +283,7 @@ export default function PrivacyPolicy() {
                   personal data at any time.
                 </p>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Because the App's core functionality depends on processing your data,
+                  Because the App&apos;s core functionality depends on processing your data,
                   withdrawal of consent will result in the deletion of your account and all
                   associated data. Withdrawal of consent can be initiated by deleting your
                   account within the App or by contacting us at{' '}
