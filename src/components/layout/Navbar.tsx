@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import PlayStoreIcon from '@/components/ui/PlayStoreIcon'
 
@@ -20,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0B0F1A]/80 backdrop-blur-xl border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image 
             src="/logos/Trex-icon-text-logo-side-by-side.png" 
             alt="Trex Logo" 
@@ -28,7 +29,7 @@ export default function Navbar() {
             height={80}
             priority
           />
-        </div>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#features" className="text-[#F1F5F9]/75 hover:text-[#6FAF9E] transition-colors">Features</a>

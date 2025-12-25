@@ -14,8 +14,9 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#6FAF9E]/10 rounded-full text-[#6FAF9E] text-sm font-bold mb-6 border border-[#6FAF9E]/20">
@@ -25,10 +26,14 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-[1.05] mb-6">
             Your Wealth. <br />
             Your Business. <br />
-            <span className="text-[#6FAF9E]">No Bank. No PAN. No Aadhaar.</span>
+            <span className="text-[#6FAF9E]">
+              <span className="block md:inline">No Bank.</span>{' '}
+              <span className="block md:inline">No PAN.</span>{' '}
+              <span className="block md:inline">No Aadhaar.</span>
+            </span>
           </h1>
           <p className="text-lg md:text-xl text-[#F1F5F9]/75 mb-10 max-w-xl leading-relaxed">
-            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once—we'll handle the live market math.
+            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once — we&apos;ll handle the live market math.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             {/* <Button className="px-10 py-5 text-xl">
@@ -58,8 +63,9 @@ export default function Hero() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
           className="relative"
         >
