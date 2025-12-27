@@ -1,15 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, EyeOff, Calculator, BarChart3, LineChart, Coins, Building2, PieChart } from 'lucide-react'
+import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function BentoGrid() {
   const cards = [
     {
-      title: "Live Market Sync",
-      content: "We fetch latest stock prices and mutual fund NAVs every minute. No more manual refreshing or spreadsheet updates.",
-      icon: Zap,
+      title: "Market Data Sync",
+      content: "We automatically sync market prices and mutual fund NAVs so your portfolio stays updated without manual refreshes or spreadsheets.",
+      icon: RefreshCw,
       size: "md:col-span-2",
       variant: 'gradient1',
       gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#A8D5C9]'
@@ -17,15 +17,15 @@ export default function BentoGrid() {
     {
       title: "100% Privacy",
       content: "No Bank Linking. No PAN. No Aadhaar. Your sensitive financial data never leaves your device.",
-      icon: EyeOff,
+      icon: ShieldCheck,
       size: "md:col-span-1",
       variant: 'gradient2',
       gradient: 'from-[#8FC5B8] via-[#A8D5C9] to-[#B8E0D5]'
     },
     {
-      title: "Smart Calculation Engine",
-      content: "Trex automates the math for you. It calculates accrued interest, maturity values, and real-time gains across every asset.",
-      icon: Calculator,
+      title: "Watch your wealth grow",
+      content:"TREX automatically tracks growth, interest, and returns across all your assets, giving you a clear picture of how your wealth builds over time — all in one place.",
+      icon: TrendingUp,
       size: "md:col-span-1",
       variant: 'gradient3',
       gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
@@ -33,7 +33,7 @@ export default function BentoGrid() {
     {
       title: "Unified Dashboard",
       content: "Every asset in one unified view. Supports Stocks, Gold, FD, and Mutual Funds (SIP & One-time) for pro analytics.",
-      icon: BarChart3,
+      icon: LayoutDashboard,
       size: "md:col-span-2",
       variant: 'gradient4',
       gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#B8E0D5]',

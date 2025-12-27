@@ -14,8 +14,8 @@ export default function Steps() {
     },
     { 
       num: "02", 
-      title: "Trex automates the math", 
-      desc: "Our system pulls live prices and calculates accrued interest instantly.",
+      title: "Trex keeps everything updated",
+      desc: "We automatically track market values and accrued interest so you can see your portfolio grow in one place.",
       icon: <Zap className="w-6 h-6" />
     },
     { 

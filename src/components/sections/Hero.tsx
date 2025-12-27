@@ -33,7 +33,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-[#F1F5F9]/75 mb-10 max-w-xl leading-relaxed">
-            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once — we&apos;ll handle the live market math.
+            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once — we&apos;ll handle the market calculations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             {/* <Button className="px-10 py-5 text-xl">
@@ -57,7 +57,7 @@ export default function Hero() {
           
           <div className="mt-16 flex items-center gap-8 opacity-30">
             <span className="text-sm font-bold text-white tracking-widest uppercase">Secure Logs</span>
-            <span className="text-sm font-bold text-white tracking-widest uppercase">Live Markets</span>
+            <span className="text-sm font-bold text-white tracking-widest uppercase">Market Data</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">100% Private</span>
           </div>
         </motion.div>
