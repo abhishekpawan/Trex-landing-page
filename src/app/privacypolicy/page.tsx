@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
                       d) Financial Functionality Disclosure
                     </h3>
                     <p className="text-[#F1F5F9]/80 leading-relaxed">
-                      The App is a manual-entry portfolio tracking and visualization tool.
+                      The App is a manual-entry portfolio tracking and visualization tool that uses publicly available market data for valuation and display purposes.
                       It does not provide lending, credit, brokerage, trading, or advisory services,
                       and does not facilitate financial transactions of any kind.
                     </p>

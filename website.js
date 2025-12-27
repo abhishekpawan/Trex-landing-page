@@ -180,7 +180,7 @@ const Hero = () => {
             <span className="text-[#6FAF9E]">No Bank. No PAN. No Aadhaar.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#F1F5F9]/60 mb-10 max-w-xl leading-relaxed">
-            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once—we’ll handle the live market math.
+            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once—we'll handle the market calculations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="px-10 py-5 text-xl">
@@ -190,7 +190,7 @@ const Hero = () => {
           
           <div className="mt-16 flex items-center gap-8 opacity-30">
             <span className="text-sm font-bold text-white tracking-widest uppercase">Secure Logs</span>
-            <span className="text-sm font-bold text-white tracking-widest uppercase">Live Markets</span>
+            <span className="text-sm font-bold text-white tracking-widest uppercase">Market Data</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">100% Private</span>
           </div>
         </motion.div>
@@ -311,7 +311,7 @@ const AudienceAudit = () => {
 const BentoGrid = () => {
   const cards = [
     {
-      title: "Live Market Sync",
+      title: "Market Data Sync",
       content: "We fetch latest stock prices and mutual fund NAVs every minute. No more manual refreshing or spreadsheet updates.",
       icon: Zap,
       size: "md:col-span-2",
@@ -326,7 +326,7 @@ const BentoGrid = () => {
     },
     {
       title: "Smart Calculation Engine",
-      content: "Trex automates the math for you. It calculates accrued interest, maturity values, and real-time gains across every asset.",
+      content: "Trex automates the math for you. It calculates accrued interest, maturity values, and current gains across every asset.",
       icon: Calculator,
       size: "md:col-span-1",
       variant: 'dark'
@@ -421,7 +421,7 @@ const Steps = () => {
     { 
       num: "02", 
       title: "Trex automates the math", 
-      desc: "Our system pulls live prices and calculates accrued interest instantly.",
+      desc: "Our system fetches latest prices and calculates accrued interest instantly.",
       icon: <Zap className="w-6 h-6" />
     },
     { 

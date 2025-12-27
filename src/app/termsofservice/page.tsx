@@ -71,7 +71,7 @@ export default function TermsOfService() {
                   <li>Does not connect to banks or financial institutions</li>
                 </ul>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  All calculations are informational only.
+                  All calculations are informational only and are based on user-entered data and publicly available market information which may be delayed.
                 </p>
               </motion.section>
 
@@ -116,7 +116,8 @@ export default function TermsOfService() {
                 </p>
                 <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
                   All profit, loss, or return calculations are informational estimates only
-                  and may not account for taxes, fees, charges, or real-time market conditions.
+                  and may not account for taxes, fees, charges, or current market conditions.
+                  Prices and NAVs displayed in the App may reflect the most recently published data and not current trading prices.
                 </p>
               </motion.section>
 
@@ -195,7 +196,7 @@ export default function TermsOfService() {
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
                   <li>The App is provided &quot;as is&quot;</li>
-                  <li>We are not liable for financial losses, data inaccuracies, or indirect damages arising from use of the App</li>
+                  <li>We are not liable for financial losses, data inaccuracies, delayed or outdated market information, or indirect damages arising from use of the App</li>
                 </ul>
               </motion.section>
 
@@ -206,10 +207,12 @@ export default function TermsOfService() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  8. Governing Law
+                  8. Market Data Disclaimer
                 </h2>
                 <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  These Terms are governed by the laws of India.
+                  The App uses publicly available market data for valuation and display purposes.
+                  Real-time or intraday accuracy is not guaranteed, and the App is not intended for trading decisions.
+                  Market data may be delayed, outdated, or incomplete, and should not be relied upon for real-time trading or investment decisions.
                 </p>
               </motion.section>
 
@@ -220,11 +223,10 @@ export default function TermsOfService() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  9. Changes to These Terms
+                  9. Governing Law
                 </h2>
                 <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We may update these Terms occasionally.
-                  Continued use of the App constitutes acceptance of the updated Terms.
+                  These Terms are governed by the laws of India.
                 </p>
               </motion.section>
 
@@ -235,7 +237,22 @@ export default function TermsOfService() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  10. Contact
+                  10. Changes to These Terms
+                </h2>
+                <p className="text-[#F1F5F9]/80 leading-relaxed">
+                  We may update these Terms occasionally.
+                  Continued use of the App constitutes acceptance of the updated Terms.
+                </p>
+              </motion.section>
+
+              <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.3 }}
+                className="space-y-6"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
+                  11. Contact
                 </h2>
                 <div className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-2">
                   <p className="text-[#F1F5F9]/90">
