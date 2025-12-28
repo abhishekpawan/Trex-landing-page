@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp } from 'lucide-react'
+import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp, Lock } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function BentoGrid() {
@@ -10,7 +10,7 @@ export default function BentoGrid() {
       title: "Market Data Sync",
       content: "We automatically sync market prices and mutual fund NAVs so your portfolio stays updated without manual refreshes or spreadsheets.",
       icon: RefreshCw,
-      size: "md:col-span-2",
+      size: "md:col-span-1",
       variant: 'gradient1',
       gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#A8D5C9]'
     },
@@ -23,11 +23,19 @@ export default function BentoGrid() {
       gradient: 'from-[#8FC5B8] via-[#A8D5C9] to-[#B8E0D5]'
     },
     {
+      title: "App Lock with Secure PIN",
+      content: "Protect your financial data with an app-level PIN. TREX locks automatically when you leave the app, keeping your portfolio private even on shared devices.",
+      icon: Lock,
+      size: "md:col-span-1",
+      variant: 'gradient3',
+      gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
+    },
+    {
       title: "Watch your wealth grow",
       content:"TREX automatically tracks growth, interest, and returns across all your assets, giving you a clear picture of how your wealth builds over time — all in one place.",
       icon: TrendingUp,
       size: "md:col-span-1",
-      variant: 'gradient3',
+      variant: 'gradient4',
       gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
     },
     {
@@ -35,7 +43,7 @@ export default function BentoGrid() {
       content: "Every asset in one unified view. Supports Stocks, Gold, FD, and Mutual Funds (SIP & One-time) for pro analytics.",
       icon: LayoutDashboard,
       size: "md:col-span-2",
-      variant: 'gradient4',
+      variant: 'gradient5',
       gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#B8E0D5]',
       showAssets: true
     }

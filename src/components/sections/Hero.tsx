@@ -57,6 +57,7 @@ export default function Hero() {
           
           <div className="mt-16 flex items-center gap-8 opacity-30">
             <span className="text-sm font-bold text-white tracking-widest uppercase">Secure Logs</span>
+            <span className="text-sm font-bold text-white tracking-widest uppercase">App Lock</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">Market Data</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">100% Private</span>
           </div>

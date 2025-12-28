@@ -21,6 +21,10 @@ export default function AudienceAudit() {
     { 
       text: "You want financial clarity without linking banks or accounts",
       icon: <Shield size={18} />
+    },
+    { 
+      text: "You want your investment data protected with an app-level PIN",
+      icon: <Shield size={18} />
     }
   ]
 
