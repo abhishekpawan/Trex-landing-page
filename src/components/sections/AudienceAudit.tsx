@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle2, XCircle, Database, Calculator, Timer, Shield } from 'lucide-react'
+import { CheckCircle2, XCircle, Database, Calculator, Timer, Shield, FileDown } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function AudienceAudit() {
@@ -25,6 +25,10 @@ export default function AudienceAudit() {
     { 
       text: "You want your investment data protected with an app-level PIN",
       icon: <Shield size={18} />
+    },
+    { 
+      text: "You want a downloadable snapshot of your portfolio for records or sharing",
+      icon: <FileDown size={18} />
     }
   ]
 

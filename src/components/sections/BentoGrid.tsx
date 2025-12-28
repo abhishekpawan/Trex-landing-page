@@ -1,18 +1,19 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp, Lock } from 'lucide-react'
+import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp, Lock, FileSpreadsheet } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function BentoGrid() {
   const cards = [
     {
-      title: "Market Data Sync",
-      content: "We automatically sync market prices and mutual fund NAVs so your portfolio stays updated without manual refreshes or spreadsheets.",
-      icon: RefreshCw,
-      size: "md:col-span-1",
+      title: "Unified Dashboard",
+      content: "Every asset in one unified view. Supports Stocks, Gold, FD, and Mutual Funds (SIP & One-time) for pro analytics.",
+      icon: LayoutDashboard,
+      size: "md:col-span-2",
       variant: 'gradient1',
-      gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#A8D5C9]'
+      gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#B8E0D5]',
+      showAssets: true
     },
     {
       title: "100% Privacy",
@@ -31,21 +32,28 @@ export default function BentoGrid() {
       gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
     },
     {
+      title: "Market Data Sync",
+      content: "We automatically sync market prices and mutual fund NAVs so your portfolio stays updated without manual refreshes or spreadsheets.",
+      icon: RefreshCw,
+      size: "md:col-span-2",
+      variant: 'gradient4',
+      gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#A8D5C9]'
+    },
+    {
       title: "Watch your wealth grow",
       content:"TREX automatically tracks growth, interest, and returns across all your assets, giving you a clear picture of how your wealth builds over time — all in one place.",
       icon: TrendingUp,
-      size: "md:col-span-1",
-      variant: 'gradient4',
+      size: "md:col-span-2",
+      variant: 'gradient5',
       gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
     },
     {
-      title: "Unified Dashboard",
-      content: "Every asset in one unified view. Supports Stocks, Gold, FD, and Mutual Funds (SIP & One-time) for pro analytics.",
-      icon: LayoutDashboard,
-      size: "md:col-span-2",
-      variant: 'gradient5',
-      gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#B8E0D5]',
-      showAssets: true
+      title: "Export Your Portfolio Anytime",
+      content: "Download a complete snapshot of your portfolio as an Excel file — including invested amounts, current values, and returns — exactly as they stand today.",
+      icon: FileSpreadsheet,
+      size: "md:col-span-1",
+      variant: 'gradient6',
+      gradient: 'from-[#8FC5B8] via-[#A8D5C9] to-[#B8E0D5]'
     }
   ]
 
