@@ -57,7 +57,7 @@ export default function Steps() {
                     {step.icon}
                   </div>
                   
-                  <h4 className="text-2xl font-bold text-white mb-4 tracking-tight">{step.title}</h4>
+                  <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{step.title}</h3>
                   <p className="text-white/50 text-lg leading-relaxed">{step.desc}</p>
                 </div>
               </div>

@@ -54,6 +54,7 @@ export default function FeedbackButtons({ label = "Like the idea?", source = 'he
               : 'bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-[#6FAF9E]/50'
           } ${(feedback !== null || isLoading) && 'cursor-not-allowed opacity-70'}`}
           disabled={feedback !== null || isLoading}
+          aria-label="Like this concept"
         >
           {isLoading ? <Loader2 size={20} className="animate-spin" /> : <ThumbsUp size={20} />}
         </motion.button>
@@ -67,6 +68,7 @@ export default function FeedbackButtons({ label = "Like the idea?", source = 'he
               : 'bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-red-500/50'
           } ${(feedback !== null || isLoading) && 'cursor-not-allowed opacity-70'}`}
           disabled={feedback !== null || isLoading}
+          aria-label="Dislike this concept"
         >
           {isLoading ? <Loader2 size={20} className="animate-spin" /> : <ThumbsDown size={20} />}
         </motion.button>
