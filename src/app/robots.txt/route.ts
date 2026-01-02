@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trex.novarexstudios.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trexfolio.com';
 
   const robots = `User-agent: *
 Allow: /

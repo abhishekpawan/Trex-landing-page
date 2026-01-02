@@ -4,7 +4,7 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trex.novarexstudios.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trexfolio.com';
 const siteTitle = 'Trex – Privacy-First Wealth Tracking';
 const siteDescription = 'Your Wealth. Your Business. No Bank. No PAN. No Aadhaar. Track your investments with complete privacy.';
 
