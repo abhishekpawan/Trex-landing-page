@@ -22,9 +22,10 @@ export const metadata: Metadata = {
     description: siteDescription,
     type: 'website',
     url: siteUrl,
+    siteName: 'Trex',
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/logos/Trex-icon-text-logo.png`,
         width: 1200,
         height: 630,
         alt: 'Trex - Privacy-First Wealth Tracking',
@@ -35,7 +36,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/og-image.png`],
+    images: [`${siteUrl}/logos/Trex-icon-text-logo.png`],
+  },
+  other: {
+    'og:image:type': 'image/png',
+    'og:image:secure_url': `${siteUrl}/logos/Trex-icon-text-logo.png`,
   },
 }
 
