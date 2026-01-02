@@ -34,9 +34,9 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h5 className="font-bold md:pt-6 pt-0 mb-6 text-white/90 uppercase tracking-widest text-xs">
+            <h3 className="font-bold md:pt-6 pt-0 mb-6 text-white/90 uppercase tracking-widest text-xs">
               Support
-            </h5>
+            </h3>
             <ul className="space-y-4 text-white/60 text-sm font-medium">
               <li>
                 <a
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs text-center md:text-left">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/60 text-xs text-center md:text-left">
           <p>
             © 2025 Novarex Studios. TREX is a product of Novarex Studios.
           </p>

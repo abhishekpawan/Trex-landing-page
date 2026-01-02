@@ -73,7 +73,7 @@ export default function Hero() {
             <FeedbackButtons label="Interested in this concept?" source="hero" />
           </div>
           
-          <div className="mt-16 flex items-center gap-8 opacity-30">
+          <div className="mt-16 flex items-center gap-8 opacity-50">
             <span className="text-sm font-bold text-white tracking-widest uppercase">Secure Logs</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">App Lock</span>
             <span className="text-sm font-bold text-white tracking-widest uppercase">Market Data</span>
