@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: 'investment tracker, wealth management, privacy-first, portfolio tracker',
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   openGraph: {
     title: siteTitle,
