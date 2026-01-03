@@ -35,7 +35,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-[#F1F5F9]/75 mb-6 max-w-xl leading-relaxed">
-            Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Log your assets once — we&apos;ll handle the market calculations.
+          Trex gives you the power of automated tracking with the peace of mind of 100% privacy. Your data stays encrypted while you add your assets once, and we handle the market calculations.
           </p>
           {/* <div className="flex flex-col sm:flex-row gap-4 items-center">
             <Button className="px-10 py-5 text-xl">
@@ -73,11 +73,11 @@ export default function Hero() {
             <FeedbackButtons label="Interested in this concept?" source="hero" />
           </div>
           
-          <div className="mt-16 flex items-center gap-8 opacity-50">
-            <span className="text-sm font-bold text-white tracking-widest uppercase">Secure Logs</span>
-            <span className="text-sm font-bold text-white tracking-widest uppercase">App Lock</span>
-            <span className="text-sm font-bold text-white tracking-widest uppercase">Market Data</span>
-            <span className="text-sm font-bold text-white tracking-widest uppercase">100% Private</span>
+          <div className="mt-16 flex flex-wrap items-center gap-4 sm:gap-8 opacity-50">
+            <span className="text-xs sm:text-sm font-bold text-white tracking-widest uppercase whitespace-nowrap">Full Encryption</span>
+            <span className="text-xs sm:text-sm font-bold text-white tracking-widest uppercase whitespace-nowrap">Market Sync</span>
+            <span className="text-xs sm:text-sm font-bold text-white tracking-widest uppercase whitespace-nowrap">100% Private</span>
+            <span className="text-xs sm:text-sm font-bold text-white tracking-widest uppercase whitespace-nowrap">App Lock</span>
           </div>
         </motion.div>
 

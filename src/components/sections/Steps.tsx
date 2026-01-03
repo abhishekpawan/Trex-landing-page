@@ -8,7 +8,7 @@ export default function Steps() {
   const steps = [
     { 
       num: "01", 
-      title: "Log your assets", 
+      title: "Add your assets", 
       desc: "Simply enter your stock quantity or FD details.",
       icon: <ImageIcon className="w-6 h-6" />
     },

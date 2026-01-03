@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { RefreshCw, ShieldCheck, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp, Lock, FileSpreadsheet } from 'lucide-react'
+import { RefreshCw, ShieldCheck, Shield, LayoutDashboard, LineChart, Coins, Building2, PieChart, TrendingUp, Lock, FileSpreadsheet } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function BentoGrid() {
@@ -16,6 +16,14 @@ export default function BentoGrid() {
       showAssets: true
     },
     {
+      title: "Watch your wealth grow",
+      content:"TREX automatically tracks growth, interest, and returns across all your assets, giving you a clear picture of how your wealth builds over time — all in one place.",
+      icon: TrendingUp,
+      size: "md:col-span-1",
+      variant: 'gradient5',
+      gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
+    },
+    {
       title: "100% Privacy",
       content: "No Bank Linking. No PAN. No Aadhaar. Your sensitive financial data never leaves your device.",
       icon: ShieldCheck,
@@ -24,12 +32,12 @@ export default function BentoGrid() {
       gradient: 'from-[#8FC5B8] via-[#A8D5C9] to-[#B8E0D5]'
     },
     {
-      title: "App Lock with Secure PIN",
-      content: "Protect your financial data with an app-level PIN. TREX locks automatically when you leave the app, keeping your portfolio private even on shared devices.",
-      icon: Lock,
-      size: "md:col-span-1",
-      variant: 'gradient3',
-      gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
+      title: "Full Data Encryption",
+      content: "All data you manually enter is encrypted and stored securely. Even we can't read your financial details.",
+      icon: Shield,
+      size: "md:col-span-2",
+      variant: 'gradient2',
+      gradient: 'from-[#8FC5B8] via-[#A8D5C9] to-[#B8E0D5]'
     },
     {
       title: "Market Data Sync",
@@ -39,14 +47,7 @@ export default function BentoGrid() {
       variant: 'gradient4',
       gradient: 'from-[#6FAF9E] via-[#8FC5B8] to-[#A8D5C9]'
     },
-    {
-      title: "Watch your wealth grow",
-      content:"TREX automatically tracks growth, interest, and returns across all your assets, giving you a clear picture of how your wealth builds over time — all in one place.",
-      icon: TrendingUp,
-      size: "md:col-span-2",
-      variant: 'gradient5',
-      gradient: 'from-[#7BB8A8] via-[#95C9BA] to-[#A8D5C9]'
-    },
+    
     {
       title: "Export Your Portfolio Anytime",
       content: "Download a complete snapshot of your portfolio as an Excel file — including invested amounts, current values, and returns — exactly as they stand today.",
