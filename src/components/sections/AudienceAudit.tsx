@@ -23,12 +23,12 @@ export default function AudienceAudit() {
       icon: <Shield size={18} />
     },
     { 
-      text: "You want your investment data protected with an app-level PIN",
-      icon: <Shield size={18} />
-    },
-    { 
       text: "You want a downloadable snapshot of your portfolio for records or sharing",
       icon: <FileDown size={18} />
+    },
+    { 
+      text: "You want your financial data encrypted, even from the app itself",
+      icon: <Shield size={18} />
     }
   ]
 

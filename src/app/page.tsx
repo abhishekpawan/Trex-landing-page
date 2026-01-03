@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero'
 import Steps from '@/components/sections/Steps'
 import AudienceAudit from '@/components/sections/AudienceAudit'
 import BentoGrid from '@/components/sections/BentoGrid'
+import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Steps />
         <AudienceAudit />
         <BentoGrid />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

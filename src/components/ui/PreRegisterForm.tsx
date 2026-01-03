@@ -78,12 +78,12 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-full overflow-hidden">
       <form 
         onSubmit={handleSubmit}
         className={`flex ${variant === 'stacked' ? 'flex-col' : 'flex-col sm:flex-row'} gap-3 w-full`}
       >
-        <div className="relative flex-1">
+        <div className="relative flex-1 min-w-0">
           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={20} />
           <input
             type="email"
@@ -99,12 +99,13 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           disabled={status === 'loading'}
-          className={`${buttonSizeClasses[size]} bg-[#6FAF9E] text-[#0B0F1A] font-bold rounded-xl hover:bg-[#7FC0AF] transition-all shadow-lg shadow-[#6FAF9E]/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap`}
+          className={`${buttonSizeClasses[size]} bg-[#6FAF9E] text-[#0B0F1A] font-bold rounded-xl hover:bg-[#7FC0AF] transition-all shadow-lg shadow-[#6FAF9E]/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap flex-shrink-0 sm:flex-shrink w-full sm:w-auto`}
         >
           {status === 'loading' ? (
             <>
               <Loader2 className="animate-spin" size={20} />
-              <span>Submitting...</span>
+              <span className="hidden sm:inline">Submitting...</span>
+              <span className="sm:hidden">Submitting</span>
             </>
           ) : (
             'Pre-Register'
