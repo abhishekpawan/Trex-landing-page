@@ -6,12 +6,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trexfolio.com';
 const siteTitle = 'Trex – Privacy-First Wealth Tracking';
-const siteDescription = 'Your Wealth. Your Business. No Bank. No PAN. No Aadhaar. Track your investments with complete privacy.';
+const siteDescription = 'Track stocks, FDs, gold, and mutual funds in one place. No bank linking, no PAN, no Aadhaar. A private way to understand your net worth.';
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'investment tracker, wealth management, privacy-first, portfolio tracker',
+  keywords: 'investment tracker app, portfolio tracker app, net worth tracker, privacy-first investment tracker, stock portfolio tracker, mutual fund tracker, SIP tracker, FD tracker, gold investment tracker, personal finance tracking',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
