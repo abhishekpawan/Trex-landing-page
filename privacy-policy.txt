@@ -1,0 +1,128 @@
+Privacy Policy
+
+Effective Date: 25 December 2025
+
+Novarex Studios ("we", "our", or "us") operates the TREX Android application (the "App").
+
+Your privacy matters to us. This Privacy Policy explains what data we collect, how we use it, and the choices you have when using the App.
+
+1. Information We Collect
+
+a) Information You Provide
+
+When you use the App, you may manually enter personal and financial information, including:
+• Investment details such as asset names, amounts, dates, quantities, and notes
+• Any optional information you choose to add inside the app
+
+This data is entered by you and stored only to provide the App's functionality.
+
+b) Account Information
+
+When you sign in using Google, we collect your name and email address solely to:
+• create and manage your account
+• authenticate access
+• prevent unauthorized access
+
+We do not use this information for marketing, advertising, or profiling.
+
+c) Permissions
+
+The App may request notification permission solely to send app-related notifications.
+No other device permissions (such as contacts, location, storage, or phone state) are accessed.
+
+d) Financial Functionality Disclosure
+
+The App is a manual-entry portfolio tracking and visualization tool that uses publicly available market data for valuation and display purposes.
+It does not provide lending, credit, brokerage, trading, or advisory services,
+and does not facilitate financial transactions of any kind.
+
+2. Information We Do NOT Collect
+
+We do not collect:
+• Bank account details
+• PAN, Aadhaar, or other government IDs
+• Payment or card information
+• Contacts, call logs, or messages
+• Location data
+• Device tracking or advertising identifiers
+
+The App does not link to banks or initiate financial transactions.
+
+3. How We Use Your Information
+
+Your data is used only to:
+• Display and calculate your portfolio information
+• Maintain your user account
+• Improve app reliability and performance
+
+We do not sell, rent, or share your personal data for advertising or marketing purposes.
+
+4. Data Storage & Security
+
+We store user data using Supabase, a managed backend service.
+
+Data is encrypted in transit using HTTPS. We implement reasonable
+administrative and technical safeguards to protect user data.
+
+The App is designed for non-sensitive, manually entered information.
+Users are strictly advised not to store sensitive personal data such as
+government-issued IDs, bank credentials, or payment information, which
+the App does not request or require.
+
+5. Data Retention & Account Deletion
+
+• You can delete your account at any time from within the App.
+• Upon deletion, your data is removed from active systems.
+• Some data may remain in secure backups for up to 12 months, after which it is permanently deleted.
+• This retention is solely for operational, security, and recovery purposes.
+
+Users who no longer have access to the App may request account and data
+deletion through our web-based request form at: https://forms.gle/2eZfKNBf4abce14GA.
+
+Requests submitted through this form will be processed in accordance
+with this Privacy Policy.
+
+6. Third-Party Services
+
+The App uses:
+• Google Sign-In for authentication
+• Supabase for backend services
+
+These services process data according to their own privacy policies.
+
+7. Children's Privacy
+
+The App is not intended for children under the age of 13.
+We do not knowingly collect personal data from children.
+If such data is identified, it will be deleted.
+
+8. Your Rights
+
+You may:
+• Access your data
+• Correct your data
+• Delete your account and associated data
+
+All of this can be done directly within the App.
+
+You have the right to withdraw your consent for the processing of your
+personal data at any time.
+
+Because the App's core functionality depends on processing your data,
+withdrawal of consent will result in the deletion of your account and all
+associated data. Withdrawal of consent can be initiated by deleting your
+account within the App or by contacting us at novarexstudios@gmail.com.
+
+9. Changes to This Policy
+
+We may update this Privacy Policy from time to time.
+Changes will be reflected in the App with an updated effective date.
+
+10. Contact Us
+
+If you have questions about this Privacy Policy:
+
+Operator: Novarex Studios
+Country: India
+Email: novarexstudios@gmail.com
+
