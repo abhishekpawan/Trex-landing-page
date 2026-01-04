@@ -1,0 +1,93 @@
+Terms of Service
+
+Effective Date: 25 December 2025
+
+These Terms of Service ("Terms") govern your use of the TREX Android application operated by Novarex Studios.
+
+By using the App, you agree to these Terms.
+
+1. Description of the App
+
+TREX is a personal portfolio tracking app that allows users to manually record and view investment information.
+
+The App:
+• Does not provide financial advice
+• Does not execute trades
+• Does not connect to banks or financial institutions
+
+All calculations are informational only and are based on user-entered data and publicly available market information which may be delayed.
+
+2. User Responsibilities
+
+You are responsible for:
+• The accuracy of data you enter
+• Keeping your account secure
+• Using the App lawfully
+
+We are not responsible for incorrect data entered by users.
+
+3. No Financial Advice
+
+TREX provides portfolio visualization and calculations based solely on
+user-entered data.
+
+It does not provide "investment advice" as defined under SEBI regulations
+or any other regulatory framework.
+
+All profit, loss, or return calculations are informational estimates only
+and may not account for taxes, fees, charges, or current market conditions.
+Prices and NAVs displayed in the App may reflect the most recently published data and not current trading prices.
+
+4. Account Access & Termination
+
+• You may delete your account at any time.
+• We reserve the right to suspend or terminate access if these Terms are violated.
+• Upon account deletion, data handling follows our Privacy Policy.
+
+Users may delete their account and associated data directly within the App.
+Users may also request account deletion by contacting us via the email
+listed in this document, in accordance with Google Play's User Data
+Deletion policy.
+
+5. Data & Content Ownership
+
+You retain ownership of all data you enter.
+
+By using the App, you grant us permission to store and process your data solely to provide the App's functionality.
+
+6. Availability & Changes
+
+We may:
+• Modify or discontinue features
+• Update the App
+• Temporarily suspend access for maintenance
+
+We are not liable for service interruptions.
+
+7. Limitation of Liability
+
+To the maximum extent permitted by law:
+• The App is provided "as is"
+• We are not liable for financial losses, data inaccuracies, delayed or outdated market information, or indirect damages arising from use of the App
+
+8. Market Data Disclaimer
+
+The App uses publicly available market data for valuation and display purposes.
+Real-time or intraday accuracy is not guaranteed, and the App is not intended for trading decisions.
+Market data may be delayed, outdated, or incomplete, and should not be relied upon for real-time trading or investment decisions.
+
+9. Governing Law
+
+These Terms are governed by the laws of India.
+
+10. Changes to These Terms
+
+We may update these Terms occasionally.
+Continued use of the App constitutes acceptance of the updated Terms.
+
+11. Contact
+
+Operator: Novarex Studios
+Email: novarexstudios@gmail.com
+Country: India
+
