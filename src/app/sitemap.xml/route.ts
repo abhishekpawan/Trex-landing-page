@@ -19,6 +19,12 @@ export async function GET() {
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>${baseUrl}/delete-account</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>${baseUrl}/termsofservice</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
