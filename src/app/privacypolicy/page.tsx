@@ -1,352 +1,253 @@
-'use client'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import LegalPage, { Section, Sub, List } from '@/components/layout/LegalPage'
+import { CONTACT_EMAIL, PRIVACY_UPDATED } from '@/lib/site'
 
-import { useEffect } from 'react'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
-import { motion } from 'framer-motion'
-
-export default function PrivacyPolicy() {
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = 'smooth'
-    return () => {
-      document.documentElement.style.scrollBehavior = 'auto'
-    }
-  }, [])
-
-  return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#F1F5F9] font-sans selection:bg-[#6FAF9E] selection:text-[#0B0F1A]">
-      <Navbar />
-      <main className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-4xl"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] tracking-tighter mb-4">
-              Privacy Policy
-            </h1>
-            <p className="text-[#F1F5F9]/70 text-sm mb-12">
-              Effective Date: 25 December 2025
-            </p>
-
-            <div className="prose prose-invert max-w-none space-y-8">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-[#F1F5F9]/80 leading-relaxed text-lg"
-              >
-                Novarex Studios (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates the TREX Android application (the &quot;App&quot;).
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-[#F1F5F9]/80 leading-relaxed"
-              >
-                Your privacy matters to us. This Privacy Policy explains what data we collect, how we use it, and the choices you have when using the App.
-              </motion.p>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  1. Information We Collect
-                </h2>
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#6FAF9E] mb-3">
-                      a) Information You Provide
-                    </h3>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed">
-                      When you use the App, you may manually enter personal and financial information, including:
-                    </p>
-                    <ul className="list-disc list-inside mt-3 space-y-2 text-[#F1F5F9]/80 ml-4">
-                      <li>Investment details such as asset names, amounts, dates, quantities, and notes</li>
-                      <li>Any optional information you choose to add inside the app</li>
-                    </ul>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed mt-3">
-                      This data is entered by you and stored only to provide the App&apos;s functionality.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#6FAF9E] mb-3">
-                      b) Account Information
-                    </h3>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed">
-                      When you sign in using Google, we collect your name and email address solely to:
-                    </p>
-                    <ul className="list-disc list-inside mt-3 space-y-2 text-[#F1F5F9]/80 ml-4">
-                      <li>create and manage your account</li>
-                      <li>authenticate access</li>
-                      <li>prevent unauthorized access</li>
-                    </ul>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed mt-3">
-                      We do not use this information for marketing, advertising, or profiling.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#6FAF9E] mb-3">
-                      c) Permissions
-                    </h3>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed">
-                      The App may request notification permission solely to send app-related notifications.
-                      No other device permissions (such as contacts, location, storage, or phone state) are accessed.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#6FAF9E] mb-3">
-                      d) Financial Functionality Disclosure
-                    </h3>
-                    <p className="text-[#F1F5F9]/80 leading-relaxed">
-                      The App is a manual-entry portfolio tracking and visualization tool that uses publicly available market data for valuation and display purposes.
-                      It does not provide lending, credit, brokerage, trading, or advisory services,
-                      and does not facilitate financial transactions of any kind.
-                    </p>
-                  </div>
-                </div>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  2. Information We Do NOT Collect
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We do not collect:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4">
-                  <li>Bank account details</li>
-                  <li>PAN, Aadhaar, or other government IDs</li>
-                  <li>Payment or card information</li>
-                  <li>Contacts, call logs, or messages</li>
-                  <li>Location data</li>
-                  <li>Device tracking or advertising identifiers</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  The App does not link to banks or initiate financial transactions.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  3. How We Use Your Information
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  Your data is used only to:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4">
-                  <li>Display and calculate your portfolio information</li>
-                  <li>Maintain your user account</li>
-                  <li>Improve app reliability and performance</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  We do not sell, rent, or share your personal data for advertising or marketing purposes.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  4. Data Storage & Security
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We store user data using Supabase, a managed backend service.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Data is encrypted in transit using HTTPS. We implement reasonable
-                  administrative and technical safeguards to protect user data.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  The App is designed for non-sensitive, manually entered information.
-                  Users are strictly advised not to store sensitive personal data such as
-                  government-issued IDs, bank credentials, or payment information, which
-                  the App does not request or require.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  5. Data Retention & Account Deletion
-                </h2>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4">
-                  <li>You can delete your account at any time from within the App.</li>
-                  <li>Upon deletion, your data is removed from active systems.</li>
-                  <li>Some data may remain in secure backups for up to 12 months, after which it is permanently deleted.</li>
-                  <li>This retention is solely for operational, security, and recovery purposes.</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Users who no longer have access to the App may request account and data
-                  deletion through our web-based request form at:{' '}
-                  <a 
-                    href="https://forms.gle/2eZfKNBf4abce14GA" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#6FAF9E] hover:underline transition-colors"
-                  >
-                    https://forms.gle/2eZfKNBf4abce14GA
-                  </a>.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Requests submitted through this form will be processed in accordance
-                  with this Privacy Policy.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  6. Third-Party Services
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  The App uses:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>Google Sign-In for authentication</li>
-                  <li>Supabase for backend services</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  These services process data according to their own privacy policies.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  7. Children&apos;s Privacy
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  The App is not intended for children under the age of 13.
-                  We do not knowingly collect personal data from children.
-                  If such data is identified, it will be deleted.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.0 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  8. Your Rights
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  You may:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>Access your data</li>
-                  <li>Correct your data</li>
-                  <li>Delete your account and associated data</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  All of this can be done directly within the App.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  You have the right to withdraw your consent for the processing of your
-                  personal data at any time.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Because the App&apos;s core functionality depends on processing your data,
-                  withdrawal of consent will result in the deletion of your account and all
-                  associated data. Withdrawal of consent can be initiated by deleting your
-                  account within the App or by contacting us at{' '}
-                  <a 
-                    href="mailto:novarexstudios@gmail.com" 
-                    className="text-[#6FAF9E] hover:underline transition-colors"
-                  >
-                    novarexstudios@gmail.com
-                  </a>.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  9. Changes to This Policy
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We may update this Privacy Policy from time to time.
-                  Changes will be reflected in the App with an updated effective date.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  10. Contact Us
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mb-4">
-                  If you have questions about this Privacy Policy:
-                </p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-2">
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Operator:</span> Novarex Studios
-                  </p>
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Country:</span> India
-                  </p>
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Email:</span>{' '}
-                    <a 
-                      href="mailto:novarexstudios@gmail.com" 
-                      className="text-[#6FAF9E] hover:underline transition-colors"
-                    >
-                      novarexstudios@gmail.com
-                    </a>
-                  </p>
-                </div>
-              </motion.section>
-            </div>
-          </motion.div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Trex',
+  description: 'What Trex keeps on your phone, what leaves it, who sees it, and how to delete it.',
+  alternates: { canonical: '/privacypolicy' },
 }
 
+const a = 'text-[#6FAF9E] underline underline-offset-4 hover:text-[#88c5b6]'
+
+export default function PrivacyPolicy() {
+  return (
+    <LegalPage
+      title="Privacy Policy"
+      updated={`For Trex 2.0 · Last updated ${PRIVACY_UPDATED}`}
+      intro={
+        <>
+          <p>
+            Trex is an Android app by Novarex Studios, India (“we”, “us”). It helps you see your investments in one place. This policy
+            says what Trex keeps on your phone, what leaves it, who can see it and how to delete it.
+          </p>
+          <p>
+            The app has the same list in plain words: <strong>Settings → What leaves your phone</strong>. If the two ever differ, tell us.
+          </p>
+        </>
+      }
+    >
+      <Section title="The short version">
+        <List
+          items={[
+            'Your portfolio lives on your phone, in an encrypted database. We can’t see what you own.',
+            'You can use Trex with no account. Signing in with Google is only for backup.',
+            'A backup is encrypted on your phone with a key only you hold. We store the encrypted copy and can’t read it.',
+            'Prices come to your phone straight from AMFI and BSE. They don’t learn what you hold.',
+            'Anonymous usage stats are on by default and one tap turns them off. They never carry amounts, names or banks.',
+            'We don’t sell your data, share it for advertising, or show ads.',
+          ]}
+        />
+      </Section>
+
+      <Section title="1. What stays on your phone">
+        <p>These are never sent to us in a form we can read. With backup on, they travel only inside your encrypted backup (section 2):</p>
+        <List
+          items={[
+            'Your holdings, transactions, amounts, net worth and history. They are stored in an encrypted database on your phone. The key to that database is kept by Android’s secure storage and never leaves the phone.',
+            'Your statements (CAS). A statement PDF is opened and read on your phone and is not uploaded. Its password, often your PAN, is typed on your phone, and Trex keeps it only if you ask it to remember it, and then only inside the phone’s encrypted storage. It is never part of a backup.',
+            'Your tax slab, your rough income, the notes on tax a bank deducted and savings rates you add. They are used on the phone to estimate tax. They leave the phone only inside your encrypted backup, if you turn backup on.',
+            'Your reminders. They are worked out and set on your phone, with Android’s own alarms.',
+          ]}
+        />
+      </Section>
+
+      <Section title="2. What leaves your phone, and when">
+        <Sub title="Backup and sign-in (only if you turn backup on)">
+          <List
+            items={[
+              'Google sign-in. You choose to sign in with Google. Our server stores your email address and an account ID. We don’t store your name or photo.',
+              'Your encrypted backup. Trex encrypts a copy of your portfolio on your phone and uploads it. We keep the last few versions. The size is padded so it doesn’t show how many holdings you have. We can see that an account exists, its email address, when it last backed up and roughly how large the backup is.',
+              'Your backup key, locked with your recovery key. The server holds the backup key only in this locked form. Without your recovery key it is useless.',
+              'A copy of your recovery key at Google. If your phone has a screen lock, Trex saves your recovery key in Google’s Block Store, which Google encrypts end to end. Google can’t read it, and neither can we. Without a screen lock, nothing is saved there.',
+              'A sign-in audit log on our server, which records that a sign-in happened.',
+            ]}
+          />
+          <p>
+            You can also save an encrypted backup file yourself. It leaves your phone only if you share it or save it somewhere. If you
+            lose your phone and every copy of your recovery key, nobody can open your backup, including us. We will never add a way to.
+          </p>
+        </Sub>
+
+        <Sub title="Prices and settings (by themselves)">
+          <List
+            items={[
+              'Prices. Your phone downloads the whole-market price files straight from AMFI (mutual fund NAVs) and BSE (stocks). They are the same files for everyone. AMFI and BSE see an internet address and a time, and the request looks like an ordinary browser’s. Nothing about you or what you hold is in it.',
+              'After you import a statement, the phone may download month-end price files from the same sources, on Wi-Fi, to rebuild past values.',
+              'A small settings file from our server, at most once a day: where the price files are, and limits such as the insurance and tax-deduction limits. The same file for everyone.',
+            ]}
+          />
+        </Sub>
+
+        <Sub title="Anonymous usage (on by default, one tap to turn off)">
+          <p>
+            While you use Trex it sends anonymous usage stats to PostHog, in the EU. They carry a random install ID made on your phone,
+            the names of screens and buttons, a rough size of your portfolio (1–5, 6–20 or 21+ holdings), the app version, your phone
+            model and Android version. They never carry amounts, names of holdings, banks, exact counts, your email or your tax details.
+            PostHog is set not to store the IP address with the stats (the address is still seen when your phone connects, as at any server). Switch them off in <strong>Settings</strong> and nothing is sent.
+          </p>
+        </Sub>
+
+        <Sub title="Error reports and feedback">
+          <List
+            items={[
+              'Error reports, when something fails: an error code, the app version, the phone model and the install ID. Never what you typed or own. We keep them for 30 days.',
+              'Feedback, when you send it: what you typed, the app version and the phone model, and your account ID if you are signed in. A diagnostic file goes only if you attach it, and you can read it first. We keep feedback for up to a year.',
+            ]}
+          />
+        </Sub>
+
+        <Sub title="Buying Trex Plus">
+          <p>
+            Google Play takes the payment and we never see your card. RevenueCat, a service that keeps track of purchases, receives a
+            random ID (its own if you are a guest, or your account ID once you sign in) and what you bought: the plan, the dates and
+            the renewal. Never your portfolio, names or holdings. When you delete your account, we ask RevenueCat to delete your
+            customer record.
+          </p>
+        </Sub>
+
+        <Sub title="The big-move alert (only if you switch it on)">
+          <p>
+            If you switch on <strong>Big moves</strong>, your phone registers with Google’s push service (Firebase Cloud Messaging) and
+            subscribes to one topic that is the same for every phone. Google sees a Firebase installation ID and push token for your
+            phone and that it subscribed. We see nothing: there is no list of phones. Each trading day we send one identical message;
+            your phone then fetches the public prices, works out the move on the phone and shows a notification only if your chosen
+            percentage was crossed. The move and your choice never leave the phone. Before you switch it on, none of this happens.
+            Switching it off, deleting your data or deleting your account unsubscribes the phone.
+          </p>
+        </Sub>
+
+        <Sub title="The launch list on this website">
+          <p>
+            If you leave your email on this website to hear when Trex is out, we store that address on our server so we can write to you
+            when it is released. We delete it if you ask.
+          </p>
+        </Sub>
+
+        <Sub title="Websites you open, and files you share">
+          <p>
+            “Get your statement” opens other companies’ sites (MF Central, CAMS, CDSL, NSDL) in your browser. What you type there goes
+            to them, not to us. A file you export, such as an Excel sheet, is a plain copy of your portfolio. It leaves your phone only
+            if you share it, and then it is out of our hands.
+          </p>
+        </Sub>
+
+        <Sub title="Server logs">
+          <p>
+            Our server and the services in front of it (Cloudflare handles web traffic to our server) see your internet address when
+            your phone connects. We keep access logs for a short time to run the service and stop abuse. We use a one-way, daily-changing
+            fingerprint of the address, not the address itself, to limit repeated requests.
+          </p>
+        </Sub>
+      </Section>
+
+      <Section title="3. What we do not collect">
+        <List
+          items={[
+            'Your PAN, Aadhaar, phone number or bank account details. Trex never asks for them. There is no bank link, no Account Aggregator, and no reading of SMS or email.',
+            'Your card or payment details. Google Play handles them.',
+            'Your contacts, call logs, messages or location.',
+            'Advertising IDs or hardware IDs such as the Android ID or IMEI. The only ID Trex makes is a random install ID.',
+          ]}
+        />
+        <p>Trex asks to show notifications so it can show your reminders. It does not use your contacts, messages or location.</p>
+      </Section>
+
+      <Section title="4. How we use it, and who else is involved">
+        <p>
+          We use what we receive to run backup, restore, purchases and the optional alert, to keep the app working and fix errors, and
+          to see which parts of the app are used. We don’t sell, rent or share your data for advertising or marketing, and Trex has no ads.
+        </p>
+        <p>These services handle data for us, each under its own privacy policy:</p>
+        <List
+          items={[
+            'Google: sign-in, Block Store, Google Play (purchases) and Firebase Cloud Messaging (only if you switch on Big moves).',
+            'PostHog (EU): anonymous usage stats.',
+            'RevenueCat: purchases.',
+            'Our own server, a virtual machine at a cloud hosting provider, with Cloudflare in front of it, holds your encrypted backup, feedback and error reports. This website is hosted by Netlify.',
+          ]}
+        />
+      </Section>
+
+      <Section title="5. Keeping and deleting your data">
+        <List
+          items={[
+            <>
+              <strong>On your phone:</strong> <strong>Settings → Delete all data</strong> erases your holdings, settings and keys on the phone, and keeps only your choice about usage stats and the public price files. Uninstalling
+              the app removes everything.
+            </>,
+            <>
+              <strong>Your account:</strong> <strong>Settings → Backup &amp; key → Delete account and backup</strong>, or see{' '}
+              <Link href="/delete-account" className={a}>
+                Delete your account
+              </Link>
+              , deletes your sign-in account, your encrypted backup and all its versions, the locked backup key, feedback you sent while
+              signed in, and the sign-in audit log. We also ask RevenueCat to delete your customer record.
+            </>,
+            'Our server keeps its own backup copies: daily ones for 30 days and weekly ones for 8 weeks. A deleted backup is still in them, in its encrypted form, until they expire, so within 8 weeks it is gone from all of them.',
+            'Anonymous usage stats stay. They carry a random install ID, never your email or anything about your portfolio, and carry no email or account ID.',
+            'Google Play keeps its own record of any purchase, under Google’s rules.',
+            'Error reports are deleted after 30 days and feedback after a year.',
+          ]}
+        />
+        <Sub title="If you used Trex 1.x">
+          <p>
+            Trex 1.x kept your holdings on our server in a form we could read. When Trex 2.0 is released we delete that data, and the old
+            accounts that have not signed in to Trex 2.0. Our server’s older backup copies may still hold it for up to 8 weeks, and then it rolls off. Trex 2.0 doesn’t use
+            any of it. If you want a copy first, write to us before then.
+          </p>
+        </Sub>
+      </Section>
+
+      <Section title="6. Your choices">
+        <List
+          items={[
+            'Use Trex without an account and without backup.',
+            'Switch anonymous usage stats off in Settings, at any time.',
+            'Export everything to Excel, or to an encrypted backup file.',
+            'Delete your data on the phone, or your account, from the app.',
+            <>
+              Ask us to access, correct or delete your data, or withdraw your consent, by writing to{' '}
+              <a href={`mailto:${CONTACT_EMAIL}`} className={a}>
+                {CONTACT_EMAIL}
+              </a>
+              . Since the portfolio is on your phone, most of this you can do in the app yourself. Withdrawing consent for backup means
+              deleting your account.
+            </>,
+          ]}
+        />
+      </Section>
+
+      <Section title="7. How we protect it, and what we can’t">
+        <p>
+          Your portfolio is encrypted on your phone, your backup is encrypted before it leaves, and connections to our server use HTTPS.
+          We can’t protect you from malware or a rooted phone, from someone who has your phone unlocked or knows its PIN, from someone who
+          has both your Google account and your phone’s screen lock, or who has your recovery key, or from files you export and share.
+          A screenshot of the recovery key screen is blocked on Android, but a photo of the screen is not.
+        </p>
+      </Section>
+
+      <Section title="8. Children">
+        <p>Trex is not meant for anyone under 18. We don’t knowingly collect data from children, and will delete it if we find it.</p>
+      </Section>
+
+      <Section title="9. Changes to this policy">
+        <p>
+          We may update this policy. The date at the top changes when we do, and if a change affects what leaves your phone, the app’s{' '}
+          <strong>What leaves your phone</strong> screen changes with it.
+        </p>
+      </Section>
+
+      <Section title="10. Contact">
+        <p>Operator: Novarex Studios, India</p>
+        <p>
+          Email:{' '}
+          <a href={`mailto:${CONTACT_EMAIL}`} className={a}>
+            {CONTACT_EMAIL}
+          </a>
+        </p>
+      </Section>
+    </LegalPage>
+  )
+}

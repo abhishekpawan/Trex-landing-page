@@ -15,67 +15,60 @@ export default function FAQ() {
 
   const faqItems: FAQItem[] = [
     {
-      question: "What is TREX?",
-      answer: "TREX is a personal app to track your investments in one place. You manually add your assets, and TREX calculates values, returns, and growth for you."
+      question: "What is Trex?",
+      answer: "Trex is an Android app that shows everything you own in one place, starting with every FD across all your banks. Your RD, PPF, EPF, NPS, gold and anything else sit beside them, and funds and stocks from a statement complete your net worth."
     },
     {
-      question: "Do I need to link my bank account?",
-      answer: "No. TREX does not ask for bank login, PAN, Aadhaar, or broker access. You stay in full control."
+      question: "Do I need an account?",
+      answer: "No. You can start without signing in, and everything works on your phone. You sign in with Google only if you want a backup."
     },
     {
-      question: "What kind of investments can I track?",
-      answer: [
-        "You can track:",
-        "- Stocks",
-        "- Gold",
-        "- Fixed Deposits (FDs)",
-        "- Mutual Funds (SIP and one-time)",
-        "",
-        "All of them appear together in one place."
-      ]
+      question: "Do I have to link my bank?",
+      answer: "No. Trex has no bank link, no Account Aggregator, and does not read your SMS or email. It never asks for your PAN, Aadhaar, phone number or name. One note: the password of a statement you import is often your PAN. You type it on your phone to open the file, and it stays there."
     },
     {
-      question: "How does TREX update prices if I don't link accounts?",
-      answer: "TREX uses public market data to update stock prices and mutual fund NAVs. You enter your investment details once. TREX keeps the values updated automatically."
+      question: "Can Trex see my portfolio?",
+      answer: "No. Your portfolio lives on your phone, in an encrypted database, and what you hold is never sent to us in a form we can read. If you turn on backup, we store an encrypted copy that only your recovery key can open, and we can’t read it. The privacy section above covers the main things that leave your phone, and the privacy policy lists all of them."
     },
     {
-      question: "Is my data safe?",
-      answer: "Yes. The data you enter is encrypted and stored securely. Your financial details are private and not shared with anyone."
+      question: "What if I lose my phone?",
+      answer: "If you had backup on, on the new phone, sign in and enter your recovery key, and your portfolio comes back. Trex often finds the key for you from Google’s end-to-end encrypted key backup, if your phone had a screen lock. The recovery key is shown to you when you turn backup on. If you lose the phone and every copy of the key, nobody can open the backup, not even us. Without backup, you can import your statements again to get your funds and stocks back."
     },
     {
-      question: "Can TREX see my investment data?",
-      answer: "No. TREX does not read or analyze your personal investment details. Your data stays yours."
+      question: "How are prices updated?",
+      answer: "Your phone downloads the day’s public price files straight from AMFI (mutual fund NAVs, the price per unit) and BSE (stock prices) when you open the app. They are end-of-day prices, not live ones. FDs, RDs, PPF and EPF are worked out on your phone from the rates you enter."
     },
     {
-      question: "Does TREX give buy or sell advice?",
-      answer: "No. TREX does not give tips, recommendations, or predictions. It only shows your numbers clearly, so you can decide."
+      question: "What kinds of money can I add?",
+      answer: "FDs, RDs, PPF, EPF, NPS, gold, Post Office schemes, bonds, property, cash and savings, mutual funds, stocks and ETFs, and anything else as Other. Funds and stocks can come in from a statement."
     },
     {
-      question: "Can I export my data?",
-      answer: "Yes. You can download your portfolio as an Excel file anytime. This includes invested amount, current value, and returns."
+      question: "Which statements work?",
+      answer: "Trex has been tested with real statements from CAMS and MF Central (funds) and CDSL (shares and funds). Statements from NSDL and KFintech may work but have not been tested with a real file; a KFintech statement can be requested on the CAMS form. The Help page shows how to get each one."
     },
     {
-      question: "Do I need finance knowledge to use TREX?",
-      answer: "No. TREX is built for normal users. If you know how much you invested, TREX will handle the rest."
+      question: "Is the tax view advice?",
+      answer: "No. It is an estimate worked out on your phone from the interest your FDs earned and the slab you choose. It is not tax advice. Trex gives no advice at all: no tips, no “top funds”, no recommendations."
     },
     {
-      question: "Is TREX for traders or long-term investors?",
-      answer: "TREX is best for long-term tracking. If you trade daily or want instant buy/sell alerts, TREX may not be for you."
+      question: "What does Trex cost?",
+      answer: "Trex is free, with no ads. Plus adds family portfolios, more colour themes and app icons: ₹130 a month, ₹1,000 a year (with a 1-week free trial for new subscribers), or ₹3,000 once. Plus is sold in India only, through Google Play. If Plus ends, nothing is deleted."
     },
     {
-      question: "Why is manual entry better?",
-      answer: [
-        "Manual entry means:",
-        "- No privacy risk",
-        "- No account access",
-        "- No hidden data sharing",
-        "",
-        "You trade a little effort for full control."
-      ]
+      question: "Can I take my data out?",
+      answer: "Yes. Export everything to an Excel file, free, any time. You can also save an encrypted backup file that your recovery key opens."
     },
     {
-      question: "Is TREX a replacement for my broker app?",
-      answer: "No. TREX does not place trades. It is only for tracking and understanding your investments."
+      question: "How do I delete my data?",
+      answer: "On your phone, Settings has Delete all data. If you signed in for backup, Backup & key in Settings also has Delete account and backup, which deletes your backup and sign-in from our server. There is a page about it too: trexfolio.com/delete-account."
+    },
+    {
+      question: "Does Trex collect any usage data?",
+      answer: "Yes, anonymous usage stats, sent to PostHog (in the EU) while you use the app. They are on by default and one tap in Settings turns them off. They carry a random ID made on your phone and the names of screens and buttons. They never carry amounts, names or banks."
+    },
+    {
+      question: "Who makes Trex?",
+      answer: "Novarex Studios, in India. Trex is for Android and for people in India for now."
     }
   ]
 
@@ -84,11 +77,11 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-10 px-6 bg-[#0B0F1A]">
+    <section id="faq" className="scroll-mt-16 py-10 px-6 bg-[#0B0F1A]">
       <div className="max-w-4xl mx-auto">
         <SectionHeading 
-          title="Frequently Asked Questions"
-          subtitle="Clear answers to common questions about privacy, data, and how TREX works."
+          title="Questions people ask"
+          subtitle="Short answers about privacy, your data and how Trex works."
         />
         
         <div className="space-y-4">
@@ -132,13 +125,13 @@ export default function FAQ() {
                   >
                     <div className="px-6 pb-5 pt-0">
                       {Array.isArray(item.answer) ? (
-                        <div className="text-[#F1F5F9]/70 leading-relaxed space-y-1">
+                        <div className="text-[#F1F5F9]/75 leading-relaxed space-y-1">
                           {item.answer.map((line, i) => (
                             <p key={i}>{line}</p>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-[#F1F5F9]/70 leading-relaxed">
+                        <p className="text-[#F1F5F9]/75 leading-relaxed">
                           {item.answer}
                         </p>
                       )}

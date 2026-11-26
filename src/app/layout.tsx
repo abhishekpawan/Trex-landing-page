@@ -1,17 +1,20 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { SITE_URL } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trexfolio.com';
-const siteTitle = 'Trex – Privacy-First Wealth Tracking';
-const siteDescription = 'Track stocks, FDs, gold, and mutual funds in one place. No bank linking, no PAN, no Aadhaar. A private way to understand your net worth.';
+const siteUrl = SITE_URL;
+const siteTitle = 'Trex: every FD in one place, private on your phone';
+const siteDescription = 'See every FD across your banks with the ₹5 lakh insurance limit, maturities and tax on interest. RD, PPF, EPF, funds and stocks too. Stays on your phone.';
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'investment tracker app, portfolio tracker app, net worth tracker, privacy-first investment tracker, stock portfolio tracker, mutual fund tracker, SIP tracker, FD tracker, gold investment tracker, personal finance tracking',
+  keywords: 'FD tracker, fixed deposit tracker app, FD maturity tracker, DICGC limit tracker, FD interest tax calculator, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/logos/Trex-icon-text-logo.png`,
         width: 1200,
         height: 630,
-        alt: 'Trex - Privacy-First Wealth Tracking',
+        alt: 'Trex: every FD in one place, private on your phone',
       },
     ],
   },
@@ -60,7 +63,9 @@ export default function RootLayout({
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'INR',
+      description: 'Free to use. Optional Plus plan for family portfolios, themes and icons.',
     },
+    countriesSupported: 'IN',
     creator: {
       '@type': 'Organization',
       name: 'Novarex Studios',

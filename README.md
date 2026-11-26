@@ -2,34 +2,29 @@
 
 A modern, privacy-first wealth tracking landing page built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Features
+## What it is
 
-- ⚡ Built with Next.js 14 (App Router)
-- 🎨 Styled with Tailwind CSS
-- ✨ Smooth animations with Framer Motion
-- 📱 Fully responsive design
-- 🎯 SEO optimized
-- 🔒 Privacy-focused messaging
+trexfolio.com for Trex 2.0: an FD-first, privacy-first portfolio tracker for Android in India. Read `TREX_LANDING_PAGE_CONTEXT.md` before changing any text (every sentence rests on the app repo's `docs/marketing/claims.md`).
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
+- Node.js 20+ 
+- pnpm (the lockfile is `pnpm-lock.yaml`)
 
 ### Installation
 
 1. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Run the development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -38,34 +33,20 @@ npm run dev
 
 ```
 src/
-├── app/
-│   ├── layout.tsx       # Root layout with metadata
-│   ├── page.tsx         # Main page component
-│   └── globals.css      # Global styles
+├── app/                 # routes: / , /help, /privacypolicy, /termsofservice, /delete-account, sitemap, robots
 ├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx   # Navigation component
-│   │   └── Footer.tsx   # Footer component
-│   ├── sections/
-│   │   ├── Hero.tsx           # Hero section
-│   │   ├── Steps.tsx          # How it works section
-│   │   ├── AudienceAudit.tsx  # Qualification section
-│   │   ├── BentoGrid.tsx      # Features bento grid
-│   │   └── CTA.tsx            # Call to action
-│   └── ui/
-│       ├── Button.tsx         # Reusable button component
-│       ├── SectionHeading.tsx # Section heading component
-│       └── S25UltraMockup.tsx # Phone mockup component
-└── public/
-    └── logos/           # Logo assets
-
+│   ├── layout/          # Navbar, Footer, LegalPage
+│   ├── sections/        # Hero, Features, More, Privacy, Plans, HowItWorks, FAQ, CTA
+│   └── ui/              # Button, GetTrex (waitlist or Play button), PlayBadge, PreRegisterForm, S25UltraMockup, SectionHeading
+└── lib/                 # site.ts (constants and the release-day switch), api.ts (waitlist), rateLimit.ts
+public/screens/          # app pictures (made-up data); public/help/ = statement help pictures
 ```
 
 ## Build for Production
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 ## Tech Stack

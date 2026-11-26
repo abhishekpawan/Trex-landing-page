@@ -3,9 +3,11 @@
 import { useEffect } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import Hero from '@/components/sections/Hero'
-import Steps from '@/components/sections/Steps'
-import AudienceAudit from '@/components/sections/AudienceAudit'
-import BentoGrid from '@/components/sections/BentoGrid'
+import Features from '@/components/sections/Features'
+import More from '@/components/sections/More'
+import Privacy from '@/components/sections/Privacy'
+import Plans from '@/components/sections/Plans'
+import HowItWorks from '@/components/sections/HowItWorks'
 import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
@@ -23,9 +25,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Steps />
-        <AudienceAudit />
-        <BentoGrid />
+        <Features />
+        <More />
+        <Privacy />
+        <Plans />
+        <HowItWorks />
         <FAQ />
         <CTA />
       </main>

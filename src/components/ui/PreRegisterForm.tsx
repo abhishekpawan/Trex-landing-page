@@ -21,7 +21,7 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
     
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus('error')
-      setMessage('Please enter a valid email')
+      setMessage('Enter a valid email address.')
       return
     }
 
@@ -42,13 +42,8 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
       }, 3000)
     } else {
       setStatus('error')
-      setMessage(response.error || 'Failed to register. Please try again.')
+      setMessage(response.error === 'Rate limit exceeded' ? response.message : 'We could not save your email just now. Please try again in a little while.')
       
-      // Reset error after 3 seconds
-      setTimeout(() => {
-        setStatus('idle')
-        setMessage('')
-      }, 3000)
     }
   }
 
@@ -89,7 +84,9 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            placeholder="Your email"
+            aria-label="Your email"
+            autoComplete="email"
             className={`w-full ${sizeClasses[size]} pl-12 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#6FAF9E] focus:bg-white/10 transition-all`}
             disabled={status === 'loading'}
           />
@@ -108,12 +105,12 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
               <span className="sm:hidden">Submitting</span>
             </>
           ) : (
-            'Pre-Register'
+            'Join the waitlist'
           )}
         </motion.button>
       </form>
       {status === 'error' && (
-        <p className="text-red-400 text-sm mt-2">{message}</p>
+        <p className="text-red-300 text-sm mt-2" role="alert">{message}</p>
       )}
     </div>
   )
