@@ -15,6 +15,7 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const [website, setWebsite] = useState('') // honeypot: real people never see or fill it
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -28,22 +29,16 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
     setStatus('loading')
     
     // Call the API
-    const response = await submitEmail(email, source)
+    const response = await submitEmail(email, website)
     
     if (response.success) {
       setStatus('success')
       setMessage(response.message)
       setEmail('')
       
-      // Reset after 3 seconds
-      setTimeout(() => {
-        setStatus('idle')
-        setMessage('')
-      }, 3000)
     } else {
       setStatus('error')
-      setMessage(response.error === 'Rate limit exceeded' ? response.message : 'We could not save your email just now. Please try again in a little while.')
-      
+      setMessage(response.message)
     }
   }
 
@@ -64,9 +59,10 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="flex items-center gap-2 text-[#6FAF9E] font-medium"
+        className="flex items-start gap-2 text-[#6FAF9E] font-medium"
+        role="status"
       >
-        <Check size={20} />
+        <Check size={20} className="mt-0.5 shrink-0" />
         <span>{message}</span>
       </motion.div>
     )
@@ -78,6 +74,16 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
         onSubmit={handleSubmit}
         className={`flex ${variant === 'stacked' ? 'flex-col' : 'flex-col sm:flex-row'} gap-3 w-full`}
       >
+        <input
+          type="text"
+          name="website"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="hidden"
+        />
         <div className="relative flex-1 min-w-0">
           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={20} />
           <input

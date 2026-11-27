@@ -20,7 +20,9 @@ Rewritten by WP-LAND, 2026-11-26. The old document described the 1.0.4 site (man
 
 ## Waitlist
 
-The form posts to the Trex server's `landing-page-submit` function (`NEXT_PUBLIC_WAITLIST_URL`, default `https://db.novarexstudios.com/functions/v1/landing-page-submit`); rows land in `public.waitlist_registrations` on the Trex database. The old cloud Supabase address no longer exists.
+The form posts to this site's own route, `src/app/api/waitlist/route.ts` (honeypot field `website`, email check, "already on the list" answered as success). It adds the address to **Buttondown** (Trex's own list, double opt-in, tag `waitlist`) and then pings the "Novarex Service Requests" Telegram group through the Trex bot with the masked address only ("ab•••@gmail.com"); a failed ping never fails the signup.
+
+Netlify environment variables (all secret, set by hand, never in git): `BUTTONDOWN_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`. Tests: `TELEGRAM_DRY_RUN=1` logs the ping instead of sending it; `BUTTONDOWN_DRY_RUN=1` skips Buttondown. The 5 older sign-ups stay in `public.waitlist_registrations` on the Trex server (the old cloud Supabase address no longer exists).
 
 ## Pages
 

@@ -22,7 +22,7 @@ export default function GetTrex({ source, size = 'lg', badge = true }: { source:
         <span className="font-medium">Trex 2.0 is coming to Google Play</span>
       </div>}
       <PreRegisterForm variant="inline" size={size} source={source} />
-      <p className="text-sm text-[#F1F5F9]/55 mt-3">We use your email only to tell you when Trex is out.</p>
+      <p className="text-sm text-[#F1F5F9]/55 mt-3">We use your email only to tell you when Trex is out. We send one mail first, to confirm it is you.</p>
     </div>
   )
 }

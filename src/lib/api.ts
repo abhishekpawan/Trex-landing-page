@@ -5,29 +5,18 @@ import { WAITLIST_URL } from './site';
 
 const API_URL = WAITLIST_URL;
 
-interface EmailSubmission {
-  type: 'email';
-  email: string;
-  source?: 'hero' | 'cta' | 'navbar';
-}
-
 interface ApiResponse {
   success: boolean;
   message: string;
-  data?: {
-    id: string;
-    type: string;
-    feedback?: string;
-  };
   error?: string;
 }
 
 /**
- * Submit email registration to waitlist
+ * Add an email to the waitlist (our own /api/waitlist route)
  */
 export async function submitEmail(
   email: string,
-  source: 'hero' | 'cta' | 'navbar' = 'hero'
+  website = ''
 ): Promise<ApiResponse> {
   try {
     // Check frontend rate limit first
@@ -42,31 +31,24 @@ export async function submitEmail(
 
     const response = await fetch(API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'email',
-        email,
-        source,
-      } as EmailSubmission),
+      headers: { 'Content-Type': 'application/json' },
+      // "website" is the hidden honeypot field: people leave it empty.
+      body: JSON.stringify({ email, website }),
     });
 
-    const data = await response.json();
+    const data = await response.json().catch(() => ({}));
 
-    if (!response.ok) {
-      // Handle rate limit from backend
-      if (response.status === 429) {
-        return {
-          success: false,
-          message: 'Too many requests. Please try again later.',
-          error: data.error || 'Rate limit exceeded',
-        };
-      }
-      throw new Error(data.error || 'Failed to submit email');
+    if (response.ok && data.ok) {
+      return {
+        success: true,
+        message: 'Almost done. We sent you an email: open it and tap the link to confirm.',
+      };
     }
-
-    return data;
+    return {
+      success: false,
+      message: data.error || 'We could not save your email just now. Please try again in a little while.',
+      error: data.error || 'Failed to submit email',
+    };
   } catch (error) {
     console.error('Email submission error:', error);
     return {

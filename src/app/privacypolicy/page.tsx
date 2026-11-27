@@ -120,8 +120,15 @@ export default function PrivacyPolicy() {
 
         <Sub title="The launch list on this website">
           <p>
-            If you leave your email on this website to hear when Trex is out, we store that address on our server so we can write to you
-            when it is released. We delete it if you ask.
+            If you leave your email on this website to hear when Trex is out, the address is held by Buttondown, the email service we use for
+            this list. It does one job: it sends you one mail to confirm the address (nothing is sent to you until you tap the link) and
+            then the mail that tells you Trex is out. Every mail has an unsubscribe link. We delete the address if you ask, and we use it
+            for nothing else. A few addresses left on this website before November 2026 are kept on our own server for the same one
+            purpose.
+          </p>
+          <p>
+            When someone joins the list, a message in our team chat on Telegram shows the address with most of it hidden (for example
+            “ab•••@gmail.com”), so we know the form works.
           </p>
         </Sub>
 
