@@ -8,19 +8,19 @@ const steps = [
   {
     num: '01',
     title: 'Add your FDs',
-    desc: 'Add an FD in a few steps. The next one at the same bank is quicker. Add your RD, PPF, EPF and the rest the same way.',
+    desc: 'Type in an FD from any bank. The next one at the same bank takes a few taps.',
     icon: <PlusCircle className="w-6 h-6" />,
   },
   {
     num: '02',
-    title: 'Bring in funds and stocks',
-    desc: 'Import a statement (CAS) and your mutual funds and shares come in together. Trex reads the PDF on your phone.',
+    title: 'Add the rest',
+    desc: 'Bring in your mutual funds and stocks from a statement. Add your PPF, EPF, gold and more by hand.',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     num: '03',
-    title: 'Open it and see',
-    desc: 'Prices update when you open the app, straight from AMFI and BSE. Your net worth, what is coming up and what changed today, in under a second on a budget Android phone (measured on a POCO C75).',
+    title: 'See the whole picture',
+    desc: 'Open Trex for your net worth, what matures next and what changed today. It opens fast, even on a budget phone.',
     icon: <Zap className="w-6 h-6" />,
   },
 ]
@@ -29,7 +29,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading tag="How it works" title="Three steps, no bank link" subtitle="Nothing to connect, nothing to sign in to. You can start in a minute." />
+        <SectionHeading tag="How it works" title="Simple to start" subtitle="No account and no bank login. Add your first FD and you are in." />
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((s, i) => (
             <motion.div

@@ -118,11 +118,11 @@ export default function PrivacyPolicy() {
           </p>
         </Sub>
 
-        <Sub title="The launch list on this website">
+        <Sub title="Getting the Google Play link by email">
           <p>
-            If you leave your email on this website to hear when Trex is out, the address is held by Buttondown, the email service we use for
+            If you leave your email on this website to get the Google Play link, the address is held by Buttondown, the email service we use for
             this list. It does one job: it sends you one mail to confirm the address (nothing is sent to you until you tap the link) and
-            then the mail that tells you Trex is out. Every mail has an unsubscribe link. We delete the address if you ask, and we use it
+            then the mail with the link. Every mail has an unsubscribe link. We delete the address if you ask, and we use it
             for nothing else. A few addresses left on this website before November 2026 are kept on our own server for the same one
             purpose.
           </p>
@@ -200,7 +200,7 @@ export default function PrivacyPolicy() {
         />
         <Sub title="If you used Trex 1.x">
           <p>
-            Trex 1.x kept your holdings on our server in a form we could read. When Trex 2.0 is released we delete that data, and the old
+            Trex 1.x kept your holdings on our server in a form we could read. That data is deleted as Trex 2.0 replaces it, together with old
             accounts that have not signed in to Trex 2.0. Our server’s older backup copies may still hold it for up to 8 weeks, and then it rolls off. Trex 2.0 doesn’t use
             any of it. If you want a copy first, write to us before then.
           </p>

@@ -44,8 +44,8 @@ export default function DeleteAccount() {
                 the phone without a backup.
               </p>
               <p className="text-ink/60 text-sm">
-                Still on Trex 1.x? <strong>Profile → Delete account</strong> closes the account; its data is removed for good when
-                Trex 2.0 is released, or straight away if you email us as below.
+                Still on Trex 1.x? <strong>Profile → Delete account</strong> closes the account; its data is removed for good as
+                Trex 2.0 replaces 1.x, or straight away if you email us as below.
               </p>
             </Section>
 

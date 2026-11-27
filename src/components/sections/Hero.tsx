@@ -14,15 +14,15 @@ export default function Hero() {
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-accent text-sm font-bold mb-6 border border-accent/20">
             <Lock size={14} />
-            For Android, in India
+            FD tracker for Android, made in India
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-[1.05] mb-6">
-            Every FD you have, in one place.{' '}
-            <span className="text-accent">Private, on your phone.</span>
+            Know where every FD stands.{' '}
+            <span className="text-accent">Privately.</span>
           </h1>
           <p className="text-lg md:text-xl text-ink/75 mb-8 max-w-xl leading-relaxed">
-            Trex shows your FDs across all your banks first, then your RD, PPF, EPF, NPS, gold and anything else. Funds and stocks from a
-            statement complete your net worth. No bank link, and Trex never asks for your PAN.
+            All your fixed deposits, from every bank, together. See when each one matures, what interest it has earned and whether any bank
+            holds more than the ₹5 lakh insurance covers. Add your PPF, EPF, mutual funds and stocks too.
           </p>
 
           <div className="max-w-xl mb-6" id="pre-register">
@@ -30,10 +30,10 @@ export default function Hero() {
           </div>
 
           <ul className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-ink/60">
-            <li>No sign-up to start</li>
             <li>Free to use</li>
+            <li>No bank login</li>
             <li>No ads</li>
-            <li>Prices from AMFI and BSE</li>
+            <li>Stays on your phone</li>
           </ul>
         </motion.div>
 

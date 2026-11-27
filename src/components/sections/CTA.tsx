@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import GetTrex from '@/components/ui/GetTrex'
-import { PLAY_LIVE } from '@/lib/site'
 
 export default function CTA() {
   return (
@@ -15,14 +14,14 @@ export default function CTA() {
       >
         <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px] pointer-events-none"></div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tighter mb-6 leading-tight">
-          Every FD, in one place you own.
+          Bring all your FDs together.
         </h2>
         <p className="text-white/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-          {PLAY_LIVE ? 'Trex is free on Google Play. Plus is optional.' : 'Trex 2.0 is coming to Google Play. Leave your email and we will write to you when it is out.'}
+          Free for Android. No sign-up, no bank login. Add your first FD and see the whole picture.
         </p>
         <div className="max-w-2xl mx-auto flex justify-center text-left">
           <div className="w-full max-w-xl">
-            <GetTrex source="cta" badge={false} />
+            <GetTrex source="cta" />
           </div>
         </div>
       </motion.div>

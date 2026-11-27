@@ -67,7 +67,7 @@ export default function TermsOfService() {
         <List
           items={[
             'Trex is free to use. Trex Plus is optional and adds family portfolios, colour themes and app icons.',
-            'Plus is sold in India only, through Google Play, which takes the payment and sets the final price and tax. At launch the plans are ₹130 a month, ₹1,000 a year (with a 1-week free trial for new subscribers) and a one-time founder plan of ₹3,000. The price shown in Google Play when you buy is the one that applies.',
+            'Plus is sold in India only, through Google Play, which takes the payment and sets the final price and tax. The plans are ₹130 a month, ₹1,000 a year (with a 1-week free trial for new subscribers) and a one-time founder plan of ₹3,000. The price shown in Google Play when you buy is the one that applies.',
             'A monthly or yearly subscription renews by itself at the end of each period until you cancel it. If you start with the free trial, it turns into a paid subscription at the end of the week unless you cancel before then. Cancel any time in Google Play (Payments and subscriptions → Subscriptions). Cancelling stops the next renewal, and you keep Plus until the end of the period you paid for.',
             'The founder plan is a single payment with no renewal.',
             'Refunds follow Google Play’s refund policy and the law. We don’t take your card details and can’t refund through the App.',

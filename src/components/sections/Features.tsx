@@ -7,31 +7,31 @@ import S25UltraMockup from '@/components/ui/S25UltraMockup'
 
 const rows = [
   {
-    tag: 'Insurance limit',
-    title: 'Every bank, against the ₹5 lakh limit',
+    tag: 'Deposit insurance',
+    title: 'See how much sits in each bank',
     body:
-      'Banks insure your deposits up to ₹5 lakh per person per bank (DICGC). Trex adds up your FDs bank by bank and draws a bar toward that limit, so you can see at a glance when one bank holds more than it covers. Adding another FD at the same bank is quicker, straight from its page.',
-    points: ['A total for each bank, and for all your deposits', 'A bar that fills toward the ₹5 lakh limit', 'Add another FD from the bank’s own page'],
+      'Deposit insurance (DICGC) covers up to ₹5 lakh per person per bank. Trex adds up your FDs bank by bank and shows a bar toward that limit, so you can see at a glance where you are over it.',
+    points: ['One total for every bank', 'A bar that fills toward the ₹5 lakh limit', 'Add the next FD from the bank’s own page'],
     src: '/screens/bank.jpg',
     pos: 0,
     alt: 'A bank page in Trex showing its total, an Over the limit tag and a bar. Made-up data.',
   },
   {
     tag: 'Maturities',
-    title: 'See which FDs end, month by month',
+    title: 'Never lose track of a maturity',
     body:
-      'One list of FDs ending soon, across all your banks. When one has matured, Trex asks a single question: renewed, or paid out? Reminders before the date are set on your phone, and they show no amount on a locked screen unless you turn that on (on a phone with a screen lock).',
-    points: ['Maturities from every bank in one list', 'Renewed or paid out: one tap to answer', 'A reminder a week before and on the day'],
+      'Every FD from every bank, in one list by date. A reminder arrives before each one ends, and when it has, Trex asks one thing: renewed, or paid out?',
+    points: ['All your maturities in one list', 'A reminder before each date', 'Renewed or paid out, in one tap'],
     src: '/screens/maturities.jpg',
     pos: 0,
     alt: 'The FDs ending soon screen in Trex, with matured FDs to answer and the next maturities by month. Made-up data.',
   },
   {
     tag: 'Interest and tax',
-    title: 'What your FDs earned, and the tax on it',
+    title: 'Know what your FDs really earn',
     body:
-      'See the interest your FDs have earned this financial year (1 April to 31 March). Tell Trex your tax slab and it estimates the tax on that interest, the tax your banks have already deducted (TDS) and what is left to pay with your return. Your slab stays on your phone, and with backup on it travels only inside the encrypted copy. It is an estimate, not tax advice.',
-    points: ['Interest earned so far, and for the full year', 'Estimated tax, TDS already deducted, and what is left', 'Advance tax dates, if any apply to you'],
+      'See the interest your FDs have earned this year, and what tax it will bring. Pick your tax slab and Trex shows the estimate, the tax your banks already cut (TDS) and what is left to pay. An estimate, not tax advice.',
+    points: ['Interest earned so far, and for the full year', 'Tax already cut by banks (TDS) and what is left', 'Advance tax dates, if they apply to you'],
     src: '/screens/tax-interest.jpg',
     pos: 0,
     alt: 'The Interest earned screen in Trex with an estimate of tax, TDS already deducted and what is left to pay. Made-up data.',
@@ -43,9 +43,9 @@ export default function Features() {
     <section id="features" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
-          tag="FDs first"
-          title="What a broker app does not show"
-          subtitle="A broker app shows your funds and stocks well. Trex starts with the rest: every FD across all your banks, with the numbers that matter for them."
+          tag="Your FDs"
+          title="Different banks. One clear view."
+          subtitle="Each bank has its own app, its own dates and its own statements. Trex puts your FDs side by side."
         />
 
         <div className="space-y-20">

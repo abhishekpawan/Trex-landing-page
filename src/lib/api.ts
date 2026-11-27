@@ -41,7 +41,7 @@ export async function submitEmail(
     if (response.ok && data.ok) {
       return {
         success: true,
-        message: 'Almost done. We sent you an email: open it and tap the link to confirm.',
+        message: 'Check your email and tap the link to confirm. We will send you the Google Play link right after.',
       };
     }
     return {

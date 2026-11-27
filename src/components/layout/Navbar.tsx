@@ -53,7 +53,7 @@ export default function Navbar() {
             ))}
             <a href={PLAY_LIVE ? PLAY_URL : '/#pre-register'}>
               <Button className="px-5 py-2">
-                {PLAY_LIVE ? 'Get it on Google Play' : 'Join the waitlist'}
+                {PLAY_LIVE ? 'Get it on Google Play' : 'Get Trex'}
               </Button>
             </a>
           </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
               <hr className="border-white/10" />
               <a href={PLAY_LIVE ? PLAY_URL : '/#pre-register'}>
                 <Button onClick={() => setIsOpen(false)} className="w-full">
-                  {PLAY_LIVE ? 'Get it on Google Play' : 'Join the waitlist'}
+                  {PLAY_LIVE ? 'Get it on Google Play' : 'Get Trex'}
                 </Button>
               </a>
             </motion.div>

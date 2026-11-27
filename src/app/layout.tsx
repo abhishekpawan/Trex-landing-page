@@ -15,13 +15,13 @@ const manrope = localFont({
 })
 
 const siteUrl = SITE_URL;
-const siteTitle = 'Trex: every FD in one place, private on your phone';
-const siteDescription = 'See every FD across your banks with the ₹5 lakh insurance limit, maturities and tax on interest. RD, PPF, EPF, funds and stocks too. Stays on your phone.';
+const siteTitle = 'Trex: FD Tracker and Net Worth App for India';
+const siteDescription = 'Track every FD from every bank in one free app. See maturities, the ₹5 lakh insurance limit and tax on interest. Add PPF, EPF, funds and stocks. Private on your phone, no bank login.';
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'FD tracker, fixed deposit tracker app, FD maturity tracker, DICGC limit tracker, FD interest tax calculator, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
+  keywords: 'FD tracker, fixed deposit tracker app, FD maturity reminder, FD maturity tracker, DICGC limit checker, FD interest tax calculator, TDS on FD interest, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   openGraph: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Trex: every FD in one place, private on your phone',
+        alt: 'Trex: FD tracker and net worth app for India',
       },
     ],
   },
@@ -67,7 +67,7 @@ export default function RootLayout({
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'INR',
-      description: 'Free to use. Optional Plus plan for family portfolios, themes and icons.',
+      description: 'Free to use, with no ads. Optional Plus plan for family portfolios, themes and icons.',
     },
     countriesSupported: 'IN',
     creator: {

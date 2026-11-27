@@ -26,9 +26,10 @@ export default function More() {
     <section id="more" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <SectionHeading compact centered={false} tag="Everything else" title="Then the rest of your money" />
+          <SectionHeading compact centered={false} tag="Everything you own" title="Your whole net worth, in one number" />
           <p className="text-ink/75 text-lg leading-relaxed mb-6">
-            Add anything you own by hand, each kind with its own form. Trex works out the interest and the value on your phone.
+            Add your RD, PPF, EPF, NPS, gold, Post Office savings, bonds, property and cash, each with its own simple form. Trex does the
+            sums, so you see what you own and what it is worth.
           </p>
           <ul className="flex flex-wrap gap-2 mb-8">
             {kinds.map((k) => (
@@ -37,16 +38,15 @@ export default function More() {
               </li>
             ))}
           </ul>
-          <h3 className="text-2xl font-bold text-white mb-3">Funds and stocks from a statement</h3>
+          <h3 className="text-2xl font-bold text-white mb-3">Funds and stocks in one go</h3>
           <p className="text-ink/75 leading-relaxed mb-4">
-            Import a statement (CAS) and your mutual funds and shares come in together, with their past purchases and SIPs. For funds, get
-            the statement from CAMS or MF Central; for shares, from CDSL. Trex reads the PDF on your phone. It is never uploaded. Then you
-            see your returns per year (XIRR) and a net-worth chart.
+            Get your statement from CAMS, MF Central or CDSL and open it in Trex. Your mutual funds and shares come in together, with
+            their past purchases and SIPs. You get your returns per year (XIRR) and a net-worth chart, and the file stays on your phone.
           </p>
           <p className="text-ink/75 leading-relaxed">
-            Not sure how to get the statement?{' '}
+            Not sure how to get your statement?{' '}
             <Link href="/help" className="text-accent underline underline-offset-4 hover:text-accent/80">
-              Step-by-step help, with pictures
+              See the step-by-step guide
             </Link>
             .
           </p>

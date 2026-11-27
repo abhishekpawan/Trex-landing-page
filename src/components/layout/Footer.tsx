@@ -19,7 +19,7 @@ export default function Footer() {
               <Image unoptimized priority src="/brand/trex-lockup-on-dark.svg" alt="Trex" width={128} height={44} className="h-11 w-auto" />
             </div>
             <p className="text-white/60 max-w-xl mb-8 leading-relaxed">
-              Trex shows every FD across your banks, and the rest of what you own, in one place on your phone. No bank link. We can’t see your portfolio.
+              Trex keeps every FD, and the rest of what you own, in one private place on your phone. No bank login, and we can’t see your portfolio.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold text-accent">
               <ShieldCheck size={14} />

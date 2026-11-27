@@ -111,7 +111,7 @@ export default function PreRegisterForm({ variant = 'inline', size = 'md', sourc
               <span className="sm:hidden">Submitting</span>
             </>
           ) : (
-            'Join the waitlist'
+            'Get Trex'
           )}
         </motion.button>
       </form>

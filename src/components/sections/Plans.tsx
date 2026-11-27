@@ -9,14 +9,14 @@ const plans = [
   {
     name: 'Free',
     price: '₹0',
-    note: 'Always free',
+    note: 'Free, with no ads',
     items: [
-      'Unlimited holdings, every kind',
-      'Statement import, returns per year (XIRR) and a net-worth chart',
-      'FD insurance limit, maturities, interest and tax view',
+      'Unlimited FDs and holdings, of every kind',
+      'Maturity reminders and the ₹5 lakh insurance view',
+      'Interest and tax estimate',
+      'Statement import and a net-worth chart',
       'Backup, and export to Excel',
-      'Dark mode, hide amounts, app lock with your phone’s lock',
-      'No ads',
+      'Dark mode, hide amounts and app lock',
     ],
   },
   {
@@ -25,8 +25,8 @@ const plans = [
     note: 'or ₹1,000 a year, with a 1-week free trial for new subscribers',
     highlight: true,
     items: [
-      'Family portfolios: one for each person, with their own tax slab and insurance limit',
-      'Five more colour themes and three more app icons',
+      'A portfolio for each family member, with their own tax slab and insurance limit',
+      'More colour themes and app icons',
       'Everything in Free',
     ],
   },
@@ -34,7 +34,7 @@ const plans = [
     name: 'Founder',
     price: '₹3,000 once',
     note: 'one payment, no renewal, while it is offered',
-    items: ['Everything in Plus', 'Paid once instead of every month or year'],
+    items: ['Everything in Plus', 'Pay once, not every month or year'],
   },
 ]
 
@@ -44,8 +44,8 @@ export default function Plans() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           tag="Free and Plus"
-          title="Free to use. Plus is for families."
-          subtitle="Tracking your money is free. Plus adds family portfolios, more themes and more icons."
+          title="Free for you. Plus for the family."
+          subtitle="Tracking your money costs nothing. Plus adds a portfolio for each family member and a few extras."
         />
         <div className="grid md:grid-cols-3 gap-6">
           {plans.map((p, i) => (
