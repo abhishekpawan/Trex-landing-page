@@ -13,7 +13,6 @@ const rows = [
       'Deposit insurance (DICGC) covers up to ₹5 lakh per person per bank. Trex adds up your FDs bank by bank and shows a bar toward that limit, so you can see at a glance where you are over it.',
     points: ['One total for every bank', 'A bar that fills toward the ₹5 lakh limit', 'Add the next FD from the bank’s own page'],
     src: '/screens/bank.jpg',
-    pos: 0,
     alt: 'A bank page in Trex showing its total, an Over the limit tag and a bar. Made-up data.',
   },
   {
@@ -23,7 +22,6 @@ const rows = [
       'Every FD from every bank, in one list by date. A reminder arrives before each one ends, and when it has, Trex asks one thing: renewed, or paid out?',
     points: ['All your maturities in one list', 'A reminder before each date', 'Renewed or paid out, in one tap'],
     src: '/screens/maturities.jpg',
-    pos: 0,
     alt: 'The FDs ending soon screen in Trex, with matured FDs to answer and the next maturities by month. Made-up data.',
   },
   {
@@ -33,7 +31,6 @@ const rows = [
       'See the interest your FDs have earned this year, and what tax it will bring. Pick your tax slab and Trex shows the estimate, the tax your banks already cut (TDS) and what is left to pay. An estimate, not tax advice.',
     points: ['Interest earned so far, and for the full year', 'Tax already cut by banks (TDS) and what is left', 'Advance tax dates, if they apply to you'],
     src: '/screens/tax-interest.jpg',
-    pos: 0,
     alt: 'The Interest earned screen in Trex with an estimate of tax, TDS already deducted and what is left to pay. Made-up data.',
   },
 ]
@@ -72,7 +69,7 @@ export default function Features() {
                 </ul>
               </div>
               <div>
-                <S25UltraMockup src={row.src} alt={row.alt} pos={row.pos} float={false} />
+                <S25UltraMockup src={row.src} alt={row.alt} float={false} />
               </div>
             </motion.div>
           ))}
