@@ -1,22 +1,29 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
+import { SITE_URL } from '@/lib/site'
 
-const inter = Inter({ subsets: ['latin'] })
+// Manrope, the Trex app's font (weights 500, 700, 800), self-hosted.
+const manrope = localFont({
+  src: [
+    { path: '../fonts/Manrope_500Medium.ttf', weight: '500' },
+    { path: '../fonts/Manrope_700Bold.ttf', weight: '700' },
+    { path: '../fonts/Manrope_800ExtraBold.ttf', weight: '800' },
+  ],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trexfolio.com';
-const siteTitle = 'Trex – Privacy-First Wealth Tracking';
-const siteDescription = 'Track stocks, FDs, gold, and mutual funds in one place. No bank linking, no PAN, no Aadhaar. A private way to understand your net worth.';
+const siteUrl = SITE_URL;
+const siteTitle = 'Trex: FD Tracker and Net Worth App for India';
+const siteDescription = 'Track every FD from every bank in one free app: maturities, the ₹5 lakh insurance limit and a tax estimate. Add PPF, EPF, funds and stocks. Private, no bank login.';
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'investment tracker app, portfolio tracker app, net worth tracker, privacy-first investment tracker, stock portfolio tracker, mutual fund tracker, SIP tracker, FD tracker, gold investment tracker, personal finance tracking',
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
+  keywords: 'FD tracker, fixed deposit tracker app, FD maturity reminder, FD maturity tracker, DICGC limit checker, FD interest tax estimate, TDS on FD interest, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -25,10 +32,10 @@ export const metadata: Metadata = {
     siteName: 'Trex',
     images: [
       {
-        url: `${siteUrl}/logos/Trex-icon-text-logo.png`,
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Trex - Privacy-First Wealth Tracking',
+        alt: 'Trex: FD tracker and net worth app for India',
       },
     ],
   },
@@ -36,11 +43,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/logos/Trex-icon-text-logo.png`],
+    images: [`${siteUrl}/og-image.png`],
   },
   other: {
     'og:image:type': 'image/png',
-    'og:image:secure_url': `${siteUrl}/logos/Trex-icon-text-logo.png`,
+    'og:image:secure_url': `${siteUrl}/og-image.png`,
   },
 }
 
@@ -60,7 +67,9 @@ export default function RootLayout({
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'INR',
+      description: 'Free to use, with no ads. Optional Plus plan for family portfolios, themes and icons.',
     },
+    countriesSupported: 'IN',
     creator: {
       '@type': 'Organization',
       name: 'Novarex Studios',
@@ -76,7 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${manrope.variable} font-sans bg-page text-ink`}>{children}</body>
     </html>
   )
 }

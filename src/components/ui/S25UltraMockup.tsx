@@ -3,25 +3,33 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-export default function S25UltraMockup() {
+// A phone frame around one screenshot. The pictures are real screens from the Trex app with made-up data.
+// The screen has the same shape as the pictures (540 x 1176, a modern tall phone, about 9:19.5), so nothing is cropped.
+// Every picture must have that shape; a different one would be stretched or cut.
+export default function S25UltraMockup({
+  src = '/screens/deposits.jpg',
+  alt = 'Trex Deposits screen, with made-up data',
+  float = true,
+}: {
+  src?: string
+  alt?: string
+  float?: boolean
+}) {
   return (
-    <motion.div 
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      className="relative mx-auto w-[280px] h-[580px] md:w-[320px] md:h-[660px] bg-[#2D3436] rounded-[32px] p-[8px] shadow-[0_0_50px_rgba(111,175,158,0.15)] border-[3px] border-[#B2BEC3]/30 overflow-hidden"
+    <motion.div
+      animate={float ? { y: [0, -10, 0] } : undefined}
+      transition={float ? { duration: 6, repeat: Infinity, ease: 'easeInOut' } : undefined}
+      className="relative mx-auto w-[230px] md:w-[260px] bg-navy rounded-[36px] p-[7px] shadow-[0_0_60px_rgba(133,144,240,0.18)] border-2 border-line overflow-hidden"
     >
-      <div className="absolute inset-0 rounded-[28px] pointer-events-none z-20 shadow-[inset_0_0_15px_rgba(0,0,0,0.8)]"></div>
-      <div className="w-full h-full bg-[#FFFFFF] rounded-[24px] overflow-hidden relative border border-white/10">
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-black rounded-full z-30 opacity-80"></div>
-        <div className="w-full h-full relative">
-          <Image
-            src="/hero-app-image.jpg"
-            alt="Trex App Dashboard"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+      <div className="w-full aspect-[540/1176] bg-white rounded-[29px] overflow-hidden relative">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="260px"
+          className="object-cover"
+          priority={float}
+        />
       </div>
     </motion.div>
   )

@@ -1,38 +1,22 @@
 // API client for landing page submissions
 
 import { rateLimiter } from './rateLimit';
+import { WAITLIST_URL } from './site';
 
-const API_URL = 'https://vmlitjxrxpkfjxorxvke.supabase.co/functions/v1/landing-page-submit';
-
-interface EmailSubmission {
-  type: 'email';
-  email: string;
-  source?: 'hero' | 'cta' | 'navbar';
-}
-
-interface FeedbackSubmission {
-  type: 'feedback';
-  feedback: 'like' | 'dislike';
-  source?: 'hero' | 'cta' | 'navbar';
-}
+const API_URL = WAITLIST_URL;
 
 interface ApiResponse {
   success: boolean;
   message: string;
-  data?: {
-    id: string;
-    type: string;
-    feedback?: string;
-  };
   error?: string;
 }
 
 /**
- * Submit email registration to waitlist
+ * Add an email to the waitlist (our own /api/waitlist route)
  */
 export async function submitEmail(
   email: string,
-  source: 'hero' | 'cta' | 'navbar' = 'hero'
+  website = ''
 ): Promise<ApiResponse> {
   try {
     // Check frontend rate limit first
@@ -47,93 +31,30 @@ export async function submitEmail(
 
     const response = await fetch(API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'email',
-        email,
-        source,
-      } as EmailSubmission),
+      headers: { 'Content-Type': 'application/json' },
+      // "website" is the hidden honeypot field: people leave it empty.
+      body: JSON.stringify({ email, website }),
     });
 
-    const data = await response.json();
+    const data = await response.json().catch(() => ({}));
 
-    if (!response.ok) {
-      // Handle rate limit from backend
-      if (response.status === 429) {
-        return {
-          success: false,
-          message: 'Too many requests. Please try again later.',
-          error: data.error || 'Rate limit exceeded',
-        };
-      }
-      throw new Error(data.error || 'Failed to submit email');
+    if (response.ok && data.ok) {
+      return {
+        success: true,
+        message: 'Check your email and tap the link to confirm. We will email you the Google Play link when Trex 2.0 is on Google Play.',
+      };
     }
-
-    return data;
+    return {
+      success: false,
+      message: data.error || 'We could not save your email just now. Please try again in a little while.',
+      error: data.error || 'We could not save your email just now.',
+    };
   } catch (error) {
     console.error('Email submission error:', error);
     return {
       success: false,
-      message: 'Failed to submit email',
+      message: 'We could not save your email just now. Please try again in a little while.',
       error: error instanceof Error ? error.message : 'Unknown error',
     };
   }
 }
-
-/**
- * Submit anonymous feedback (like/dislike)
- */
-export async function submitFeedback(
-  feedback: 'like' | 'dislike',
-  source: 'hero' | 'cta' | 'navbar' = 'hero'
-): Promise<ApiResponse> {
-  try {
-    // Check frontend rate limit first
-    const rateLimit = rateLimiter.check('feedback');
-    if (!rateLimit.allowed) {
-      return {
-        success: false,
-        message: `Too many submissions. Please try again in ${rateLimit.resetIn} minutes.`,
-        error: 'Rate limit exceeded',
-      };
-    }
-
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'feedback',
-        feedback,
-        source,
-      } as FeedbackSubmission),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      // Handle rate limit from backend
-      if (response.status === 429) {
-        return {
-          success: false,
-          message: 'Too many requests. Please try again later.',
-          error: data.error || 'Rate limit exceeded',
-        };
-      }
-      throw new Error(data.error || 'Failed to submit feedback');
-    }
-
-    return data;
-  } catch (error) {
-    console.error('Feedback submission error:', error);
-    return {
-      success: false,
-      message: 'Failed to submit feedback',
-      error: error instanceof Error ? error.message : 'Unknown error',
-    };
-  }
-}
-

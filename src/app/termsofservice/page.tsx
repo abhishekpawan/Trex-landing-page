@@ -1,283 +1,124 @@
-'use client'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import LegalPage, { Section, List } from '@/components/layout/LegalPage'
+import { CONTACT_EMAIL, PRIVACY_UPDATED } from '@/lib/site'
 
-import { useEffect } from 'react'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
-import { motion } from 'framer-motion'
-
-export default function TermsOfService() {
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = 'smooth'
-    return () => {
-      document.documentElement.style.scrollBehavior = 'auto'
-    }
-  }, [])
-
-  return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#F1F5F9] font-sans selection:bg-[#6FAF9E] selection:text-[#0B0F1A]">
-      <Navbar />
-      <main className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-4xl"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] tracking-tighter mb-4">
-              Terms of Service
-            </h1>
-            <p className="text-[#F1F5F9]/70 text-sm mb-12">
-              Effective Date: 25 December 2025
-            </p>
-
-            <div className="prose prose-invert max-w-none space-y-8">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-[#F1F5F9]/80 leading-relaxed text-lg"
-              >
-                These Terms of Service (&quot;Terms&quot;) govern your use of the TREX Android application operated by Novarex Studios.
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-[#F1F5F9]/80 leading-relaxed"
-              >
-                By using the App, you agree to these Terms.
-              </motion.p>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  1. Description of the App
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  TREX is a personal portfolio tracking app that allows users to manually record and view investment information.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  The App:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4">
-                  <li>Does not provide financial advice</li>
-                  <li>Does not execute trades</li>
-                  <li>Does not connect to banks or financial institutions</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  All calculations are informational only and are based on user-entered data and publicly available market information which may be delayed.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  2. User Responsibilities
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  You are responsible for:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>The accuracy of data you enter</li>
-                  <li>Keeping your account secure</li>
-                  <li>Using the App lawfully</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  We are not responsible for incorrect data entered by users.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  3. No Financial Advice
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  TREX provides portfolio visualization and calculations based solely on
-                  user-entered data.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  It does not provide &quot;investment advice&quot; as defined under SEBI regulations
-                  or any other regulatory framework.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  All profit, loss, or return calculations are informational estimates only
-                  and may not account for taxes, fees, charges, or current market conditions.
-                  Prices and NAVs displayed in the App may reflect the most recently published data and not current trading prices.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  4. Account Access & Termination
-                </h2>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4">
-                  <li>You may delete your account at any time.</li>
-                  <li>We reserve the right to suspend or terminate access if these Terms are violated.</li>
-                  <li>Upon account deletion, data handling follows our Privacy Policy.</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  Users may delete their account and associated data directly within the App.
-                  Users may also request account deletion by contacting us via the email
-                  listed in this document, in accordance with Google Play&apos;s User Data
-                  Deletion policy.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  5. Data & Content Ownership
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  You retain ownership of all data you enter.
-                </p>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  By using the App, you grant us permission to store and process your data solely to provide the App&apos;s functionality.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  6. Availability & Changes
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We may:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>Modify or discontinue features</li>
-                  <li>Update the App</li>
-                  <li>Temporarily suspend access for maintenance</li>
-                </ul>
-                <p className="text-[#F1F5F9]/80 leading-relaxed mt-4">
-                  We are not liable for service interruptions.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  7. Limitation of Liability
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  To the maximum extent permitted by law:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-[#F1F5F9]/80 ml-4 mt-3">
-                  <li>The App is provided &quot;as is&quot;</li>
-                  <li>We are not liable for financial losses, data inaccuracies, delayed or outdated market information, or indirect damages arising from use of the App</li>
-                </ul>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.0 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  8. Market Data Disclaimer
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  The App uses publicly available market data for valuation and display purposes.
-                  Real-time or intraday accuracy is not guaranteed, and the App is not intended for trading decisions.
-                  Market data may be delayed, outdated, or incomplete, and should not be relied upon for real-time trading or investment decisions.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  9. Governing Law
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  These Terms are governed by the laws of India.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  10. Changes to These Terms
-                </h2>
-                <p className="text-[#F1F5F9]/80 leading-relaxed">
-                  We may update these Terms occasionally.
-                  Continued use of the App constitutes acceptance of the updated Terms.
-                </p>
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.3 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-6">
-                  11. Contact
-                </h2>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-2">
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Operator:</span> Novarex Studios
-                  </p>
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Email:</span>{' '}
-                    <a 
-                      href="mailto:novarexstudios@gmail.com" 
-                      className="text-[#6FAF9E] hover:underline transition-colors"
-                    >
-                      novarexstudios@gmail.com
-                    </a>
-                  </p>
-                  <p className="text-[#F1F5F9]/90">
-                    <span className="font-semibold">Country:</span> India
-                  </p>
-                </div>
-              </motion.section>
-            </div>
-          </motion.div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
+export const metadata: Metadata = {
+  title: 'Terms of Service | Trex',
+  description: 'The terms for using Trex, including Trex Plus and how renewals work.',
+  alternates: { canonical: '/termsofservice' },
 }
 
+const a = 'text-accent underline underline-offset-4 hover:text-accent/80'
+
+export default function TermsOfService() {
+  return (
+    <LegalPage
+      title="Terms of Service"
+      updated={`For Trex 2.0 · Last updated ${PRIVACY_UPDATED}`}
+      intro={
+        <p>
+          These terms cover your use of the Trex Android app (“the App”), run by Novarex Studios, India (“we”, “us”). By using the App
+          you agree to them. Our{' '}
+          <Link href="/privacypolicy" className={a}>
+            Privacy Policy
+          </Link>{' '}
+          says what happens to your data.
+        </p>
+      }
+    >
+      <Section title="1. What Trex is">
+        <p>
+          Trex is a tool to record and view your own investments in one place: fixed deposits, recurring deposits, PPF, EPF, NPS, gold,
+          post office schemes, bonds, property, funds, stocks and other holdings. You add holdings yourself or import a statement. The
+          App works out values, interest and returns on your phone. It does not connect to your bank or broker, and it does not buy,
+          sell or move money.
+        </p>
+      </Section>
+
+      <Section title="2. No advice">
+        <List
+          items={[
+            'Trex gives no investment, tax or legal advice, and makes no recommendations. Trex is not a SEBI-registered investment adviser or research analyst.',
+            'Every figure is an estimate worked out from what you entered or imported and from public prices. That includes interest, returns per year (XIRR), the tax estimate, advance-tax dates and the insurance-limit bar. Banks round and calculate differently, so a figure can differ from your bank’s or your tax return. Check anything that matters with your bank, the source or a qualified professional.',
+            'Tax rules and limits change. Trex takes them from official sources and keeps them in a settings file that we can update, but we can’t promise they are current or right for your situation.',
+          ]}
+        />
+      </Section>
+
+      <Section title="3. Prices">
+        <p>
+          Prices and NAVs come from the public files of AMFI and BSE. They are end-of-day figures, can be late, missing or wrong, and are
+          not live. Don’t use Trex for trading decisions. We have no licence from, and no partnership with, AMFI or BSE.
+        </p>
+      </Section>
+
+      <Section title="4. Your data and your responsibilities">
+        <List
+          items={[
+            'You own your data. Your portfolio is on your phone, and we don’t hold it. If you turn on backup, you let us store an encrypted copy that we can’t read, for as long as you keep the account.',
+            'You are responsible for what you enter, for keeping your phone and Google account secure, and for keeping your recovery key. We can’t recover a backup without it, and nobody can. If you lose the phone and every copy of the key, the backup can’t be opened.',
+            'Use Trex lawfully. Don’t try to break it, overload our servers or get into other people’s backups.',
+          ]}
+        />
+      </Section>
+
+      <Section title="5. Trex Plus and payments">
+        <List
+          items={[
+            'Trex is free to use. Trex Plus is optional and adds family portfolios, colour themes and app icons.',
+            'Plus is sold in India only, through Google Play, which takes the payment and sets the final price and tax. The plans are ₹130 a month, ₹1,000 a year (with a 1-week free trial for new subscribers) and a one-time founder plan of ₹3,000. The price shown in Google Play when you buy is the one that applies.',
+            'A monthly or yearly subscription renews by itself at the end of each period until you cancel it. If you start with the free trial, it turns into a paid subscription at the end of the week unless you cancel before then. Cancel any time in Google Play (Payments and subscriptions → Subscriptions). Cancelling stops the next renewal, and you keep Plus until the end of the period you paid for.',
+            'The founder plan is a single payment with no renewal.',
+            'Refunds follow Google Play’s refund policy and the law. We don’t take your card details and can’t refund through the App.',
+            'If Plus ends, nothing is deleted and export stays free. Portfolios you added for family stay on your phone and stay visible and exportable, but you can’t add to or change them until you have Plus again.',
+          ]}
+        />
+      </Section>
+
+      <Section title="6. Your account">
+        <p>
+          You don’t need an account to use Trex. An account exists only for backup. You can delete it any time in the App (
+          <strong>Settings → Backup &amp; key → Delete account and backup</strong>) or as described on our{' '}
+          <Link href="/delete-account" className={a}>
+            delete-account page
+          </Link>
+          . We may suspend or close an account that breaks these terms. What happens to data on deletion is in the Privacy Policy.
+        </p>
+      </Section>
+
+      <Section title="7. Changes and availability">
+        <p>
+          We may change, add or remove features, update the App or pause the service for maintenance. Statement websites, price sources
+          and Google’s services are outside our control, and if one changes or stops, part of Trex may stop working until we adapt.
+        </p>
+      </Section>
+
+      <Section title="8. Liability">
+        <p>
+          To the extent the law allows, the App is provided “as is”. We are not liable for financial losses, wrong, late or missing
+          figures, a lost backup or indirect damages arising from using the App. Nothing in these terms limits a right you have under
+          law that can’t be limited.
+        </p>
+      </Section>
+
+      <Section title="9. Governing law">
+        <p>These terms are governed by the laws of India.</p>
+      </Section>
+
+      <Section title="10. Changes to these terms">
+        <p>We may update these terms. The date at the top changes when we do. If you keep using the App after a change, you accept it.</p>
+      </Section>
+
+      <Section title="11. Contact">
+        <p>Operator: Novarex Studios, India</p>
+        <p>
+          Email:{' '}
+          <a href={`mailto:${CONTACT_EMAIL}`} className={a}>
+            {CONTACT_EMAIL}
+          </a>
+        </p>
+      </Section>
+    </LegalPage>
+  )
+}
