@@ -41,19 +41,19 @@ export async function submitEmail(
     if (response.ok && data.ok) {
       return {
         success: true,
-        message: 'Check your email and tap the link to confirm. We will send you the Google Play link right after.',
+        message: 'Check your email and tap the link to confirm. We will email you the Google Play link when Trex 2.0 is on Google Play.',
       };
     }
     return {
       success: false,
       message: data.error || 'We could not save your email just now. Please try again in a little while.',
-      error: data.error || 'Failed to submit email',
+      error: data.error || 'We could not save your email just now.',
     };
   } catch (error) {
     console.error('Email submission error:', error);
     return {
       success: false,
-      message: 'Failed to submit email',
+      message: 'We could not save your email just now. Please try again in a little while.',
       error: error instanceof Error ? error.message : 'Unknown error',
     };
   }

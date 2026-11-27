@@ -15,7 +15,7 @@ const groups = [
     items: [
       'Your holdings, amounts and net worth. Nobody at Trex can see them.',
       'Your statements. They are read on your phone and never uploaded.',
-      'No bank login, and Trex never asks for your PAN, Aadhaar or phone number. No ads either.',
+      'No bank login, and Trex never asks for your PAN, Aadhaar or phone number.',
     ],
   },
   {
@@ -23,9 +23,9 @@ const groups = [
     title: 'Leaves only if you choose',
     lead: 'Backup is optional, and Trex works fully without it.',
     items: [
-      'A backup is encrypted on your phone with a key only you hold, so we cannot read it.',
-      'Feedback you send, a file you export, and the Big-move alert if you switch it on.',
-      'Buying Plus goes through Google Play. We never see your card.',
+      'A backup is encrypted on your phone with a key only you hold, so we cannot read it. It needs a Google sign-in, so our server keeps your email address, never your name.',
+      'Feedback you send, a file you export, and the big-move alert if you switch it on. For that alert, Google’s notification service sees that your phone subscribed, nothing about what you own.',
+      'Buying Plus goes through Google Play and our purchase service (RevenueCat). They see the plan, never your portfolio. We never see your card.',
     ],
   },
   {

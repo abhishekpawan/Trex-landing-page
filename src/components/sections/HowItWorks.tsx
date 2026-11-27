@@ -29,7 +29,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading tag="How it works" title="Simple to start" subtitle="No account and no bank login. Add your first FD and you are in." />
+        <SectionHeading tag="How it works" title="Getting started" subtitle="No account and no bank login. Add your first FD and you are in." />
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((s, i) => (
             <motion.div

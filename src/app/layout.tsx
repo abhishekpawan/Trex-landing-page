@@ -16,12 +16,12 @@ const manrope = localFont({
 
 const siteUrl = SITE_URL;
 const siteTitle = 'Trex: FD Tracker and Net Worth App for India';
-const siteDescription = 'Track every FD from every bank in one free app. See maturities, the ₹5 lakh insurance limit and tax on interest. Add PPF, EPF, funds and stocks. Private on your phone, no bank login.';
+const siteDescription = 'Track every FD from every bank in one free app: maturities, the ₹5 lakh insurance limit and a tax estimate. Add PPF, EPF, funds and stocks. Private, no bank login.';
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'FD tracker, fixed deposit tracker app, FD maturity reminder, FD maturity tracker, DICGC limit checker, FD interest tax calculator, TDS on FD interest, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
+  keywords: 'FD tracker, fixed deposit tracker app, FD maturity reminder, FD maturity tracker, DICGC limit checker, FD interest tax estimate, TDS on FD interest, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   openGraph: {

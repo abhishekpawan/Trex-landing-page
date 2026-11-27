@@ -19,7 +19,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'How do I know if my deposits are above the ₹5 lakh insurance limit?',
     answer:
-      'Banks insure deposits up to ₹5 lakh per person per bank (DICGC). Trex adds up your FDs bank by bank and shows a bar toward that limit, with an “Over the limit” tag when a bank holds more.',
+      'Bank deposits are insured up to ₹5 lakh per person per bank (DICGC). Trex adds up your FDs bank by bank and shows a bar toward that limit, with an “Over the limit” tag when a bank holds more.',
   },
   {
     question: 'Will Trex remind me when an FD matures?',
@@ -44,7 +44,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'What if I lose my phone?',
     answer:
-      'If you turned on backup, sign in on your new phone and enter your recovery key, and your portfolio comes back. Trex often finds the key for you, if your old phone had a screen lock. If you lose the phone and every copy of the key, nobody can open the backup, not even us. Without backup, a lost phone means a lost portfolio.',
+      'If you turned on backup, sign in on your new phone and enter your recovery key, and your portfolio comes back. Often Trex finds the key by itself, when you sign in with the same Google account and your old phone had a screen lock. If you lose the phone and every copy of the key, nobody can open the backup, not even us. Without a backup, what was on that phone is gone, unless you saved a backup file. A statement brings back your funds and stocks, but FDs need adding again.',
   },
   {
     question: 'Can I track mutual funds, stocks, PPF, EPF and NPS too?',
@@ -69,12 +69,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Can I take my data out, or delete it?',
     answer:
-      'Yes, both. Export everything to an Excel file for free, any time. In Settings, Delete all data clears your phone, and if you signed in for backup you can also delete your account and backup from our server. There is a page about it too: trexfolio.com/delete-account.',
+      'Yes, both. Export everything to an Excel file for free, any time. In Settings, Delete all data clears your phone, and if you signed in for backup you can also delete your account and backup from our server. Older encrypted copies in our server backups roll off within weeks. There is a page about it too: trexfolio.com/delete-account.',
   },
   {
     question: 'Does Trex collect usage data?',
     answer:
-      'Yes, anonymous usage stats, on by default, with one tap in Settings to turn them off. They carry a random ID made on your phone and the names of screens and buttons. They never carry amounts, names or banks.',
+      'Yes, anonymous usage stats, on by default, with one tap in Settings to turn them off. They carry a random ID made on your phone, screen and button names, a rough holdings range (1-5, 6-20 or 21+), the app version and the phone model. Never amounts, names, banks or exact counts.',
   },
   {
     question: 'Who makes Trex, and is it on iPhone?',

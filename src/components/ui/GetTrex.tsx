@@ -16,7 +16,7 @@ export default function GetTrex({ source, size = 'lg' }: { source: 'hero' | 'cta
   return (
     <div>
       <PreRegisterForm variant="inline" size={size} source={source} />
-      <p className="text-sm text-ink/55 mt-3">Free for Android in India. We email you the Google Play link, and nothing else.</p>
+      <p className="text-sm text-ink/55 mt-3">Free for Android in India. We email you once to confirm, then the Google Play link. Nothing else.</p>
     </div>
   )
 }

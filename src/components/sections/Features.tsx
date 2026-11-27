@@ -18,7 +18,7 @@ const rows = [
   },
   {
     tag: 'Maturities',
-    title: 'Never lose track of a maturity',
+    title: 'Keep track of every maturity',
     body:
       'Every FD from every bank, in one list by date. A reminder arrives before each one ends, and when it has, Trex asks one thing: renewed, or paid out?',
     points: ['All your maturities in one list', 'A reminder before each date', 'Renewed or paid out, in one tap'],
