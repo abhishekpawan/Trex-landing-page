@@ -77,7 +77,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="scroll-mt-16 py-10 px-6 bg-[#0B0F1A]">
+    <section id="faq" className="scroll-mt-16 py-10 px-6 bg-page">
       <div className="max-w-4xl mx-auto">
         <SectionHeading 
           title="Questions people ask"
@@ -99,7 +99,7 @@ export default function FAQ() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left group"
                 aria-expanded={openIndex === index}
               >
-                <span className="text-lg font-semibold text-[#F1F5F9] pr-4 group-hover:text-[#6FAF9E] transition-colors">
+                <span className="text-lg font-semibold text-ink pr-4 group-hover:text-accent transition-colors">
                   {item.question}
                 </span>
                 <motion.div
@@ -109,7 +109,7 @@ export default function FAQ() {
                 >
                   <ChevronDown 
                     size={24} 
-                    className="text-[#6FAF9E]" 
+                    className="text-accent" 
                   />
                 </motion.div>
               </button>
@@ -125,13 +125,13 @@ export default function FAQ() {
                   >
                     <div className="px-6 pb-5 pt-0">
                       {Array.isArray(item.answer) ? (
-                        <div className="text-[#F1F5F9]/75 leading-relaxed space-y-1">
+                        <div className="text-ink/75 leading-relaxed space-y-1">
                           {item.answer.map((line, i) => (
                             <p key={i}>{line}</p>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-[#F1F5F9]/75 leading-relaxed">
+                        <p className="text-ink/75 leading-relaxed">
                           {item.answer}
                         </p>
                       )}

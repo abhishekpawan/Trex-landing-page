@@ -11,17 +11,17 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B0F1A] text-white py-10 px-6 border-t border-white/5">
+    <footer className="bg-page text-white py-10 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           <div>
             <div className="flex items-center mb-6">
-              <Image src="/logos/Trex-icon-text-logo-side-by-side.png" alt="Trex" width={150} height={70} />
+              <Image unoptimized priority src="/brand/trex-lockup-on-dark.svg" alt="Trex" width={128} height={44} className="h-11 w-auto" />
             </div>
             <p className="text-white/60 max-w-xl mb-8 leading-relaxed">
               Trex shows every FD across your banks, and the rest of what you own, in one place on your phone. No bank link. We can’t see your portfolio.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold text-[#6FAF9E]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold text-accent">
               <ShieldCheck size={14} />
               Your portfolio stays on your phone
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-4 text-white/60 text-sm font-medium">
               {links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="hover:text-[#6FAF9E] transition-colors">
+                  <Link href={l.href} className="hover:text-accent transition-colors">
                     {l.label}
                   </Link>
                 </li>

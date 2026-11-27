@@ -40,7 +40,7 @@ const plans = [
 
 export default function Plans() {
   return (
-    <section id="plans" className="scroll-mt-16 py-16 px-6 bg-[#0B0F1A]">
+    <section id="plans" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           tag="Free and Plus"
@@ -55,15 +55,15 @@ export default function Plans() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`rounded-3xl p-7 border ${p.highlight ? 'border-[#6FAF9E]/60 bg-[#6FAF9E]/5' : 'border-white/10 bg-[#1F2933]/30'}`}
+              className={`rounded-3xl p-7 border ${p.highlight ? 'border-accent/60 bg-accent/5' : 'border-white/10 bg-raised/30'}`}
             >
-              <h3 className="text-lg font-bold text-[#6FAF9E] mb-2">{p.name}</h3>
+              <h3 className="text-lg font-bold text-accent mb-2">{p.name}</h3>
               <p className="text-3xl font-bold text-white tracking-tight">{p.price}</p>
-              <p className="text-sm text-[#F1F5F9]/60 mb-6 min-h-[2.5rem]">{p.note}</p>
+              <p className="text-sm text-ink/60 mb-6 min-h-[2.5rem]">{p.note}</p>
               <ul className="space-y-3">
                 {p.items.map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-[#F1F5F9]/85 text-[15px] leading-relaxed">
-                    <Check size={18} className="text-[#6FAF9E] mt-1 flex-shrink-0" />
+                  <li key={t} className="flex items-start gap-3 text-ink/85 text-[15px] leading-relaxed">
+                    <Check size={18} className="text-accent mt-1 flex-shrink-0" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -71,7 +71,7 @@ export default function Plans() {
             </motion.div>
           ))}
         </div>
-        <p className="text-center text-sm text-[#F1F5F9]/55 mt-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-center text-sm text-ink/55 mt-8 max-w-2xl mx-auto leading-relaxed">
           Plus is sold in India only, through Google Play, at the prices Google Play shows. A subscription renews until you cancel it in
           Google Play. If Plus ends, nothing is deleted and export stays free.
         </p>

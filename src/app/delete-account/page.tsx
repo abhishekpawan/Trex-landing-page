@@ -18,21 +18,21 @@ const MAILTO = `mailto:${SUPPORT}?subject=${encodeURIComponent('Delete my Trex a
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mt-12 mb-2">{title}</h2>
-      <div className="text-[#F1F5F9]/80 leading-relaxed space-y-3">{children}</div>
+      <h2 className="text-2xl md:text-3xl font-bold text-ink mt-12 mb-2">{title}</h2>
+      <div className="text-ink/80 leading-relaxed space-y-3">{children}</div>
     </section>
   )
 }
 
 export default function DeleteAccount() {
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#F1F5F9] font-sans selection:bg-[#6FAF9E] selection:text-[#0B0F1A]">
+    <div className="min-h-screen bg-page text-ink font-sans selection:bg-accent selection:text-page">
       <Navbar />
       <main className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] tracking-tighter mb-4">Delete your Trex account</h1>
-            <p className="text-[#F1F5F9]/70 text-lg">
+            <h1 className="text-4xl md:text-5xl font-bold text-ink tracking-tighter mb-4">Delete your Trex account</h1>
+            <p className="text-ink/70 text-lg">
               Trex is a portfolio tracker by Novarex Studios (Android app <span className="font-mono">com.novarex.trex</span>).
               You can delete your account and everything our server holds for it at any time.
             </p>
@@ -43,7 +43,7 @@ export default function DeleteAccount() {
                 confirm. Your account and backup are deleted at once; our server&apos;s own older copies roll off within 8 weeks (see below). A switch there lets you also remove the portfolio from the phone, or keep it on
                 the phone without a backup.
               </p>
-              <p className="text-[#F1F5F9]/60 text-sm">
+              <p className="text-ink/60 text-sm">
                 Still on Trex 1.x? <strong>Profile → Delete account</strong> closes the account; its data is removed for good when
                 Trex 2.0 is released, or straight away if you email us as below.
               </p>
@@ -52,7 +52,7 @@ export default function DeleteAccount() {
             <Section title="Without the app">
               <p>If you no longer have the app, email us from the Google address you signed in to Trex with:</p>
               <p>
-                <a href={MAILTO} className="inline-block rounded-lg bg-[#6FAF9E] px-5 py-3 font-semibold text-[#0B0F1A] hover:opacity-90">
+                <a href={MAILTO} className="inline-block rounded-lg bg-accent px-5 py-3 font-semibold text-page hover:opacity-90">
                   Email {SUPPORT}
                 </a>
               </p>

@@ -1,9 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import { SITE_URL } from '@/lib/site'
 
-const inter = Inter({ subsets: ['latin'] })
+// Manrope, the Trex app's font (weights 500, 700, 800), self-hosted.
+const manrope = localFont({
+  src: [
+    { path: '../fonts/Manrope_500Medium.ttf', weight: '500' },
+    { path: '../fonts/Manrope_700Bold.ttf', weight: '700' },
+    { path: '../fonts/Manrope_800ExtraBold.ttf', weight: '800' },
+  ],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
 const siteUrl = SITE_URL;
 const siteTitle = 'Trex: every FD in one place, private on your phone';
@@ -15,11 +24,6 @@ export const metadata: Metadata = {
   keywords: 'FD tracker, fixed deposit tracker app, FD maturity tracker, DICGC limit tracker, FD interest tax calculator, net worth tracker India, portfolio tracker app, private investment tracker, mutual fund tracker, SIP tracker, PPF EPF NPS tracker, CAS import',
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Trex',
     images: [
       {
-        url: `${siteUrl}/logos/Trex-icon-text-logo.png`,
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Trex: every FD in one place, private on your phone',
@@ -39,11 +43,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/logos/Trex-icon-text-logo.png`],
+    images: [`${siteUrl}/og-image.png`],
   },
   other: {
     'og:image:type': 'image/png',
-    'og:image:secure_url': `${siteUrl}/logos/Trex-icon-text-logo.png`,
+    'og:image:secure_url': `${siteUrl}/og-image.png`,
   },
 }
 
@@ -81,7 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${manrope.variable} font-sans bg-page text-ink`}>{children}</body>
     </html>
   )
 }

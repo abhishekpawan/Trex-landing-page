@@ -60,3 +60,8 @@ pnpm start
 ## License
 
 Private and Proprietary
+
+
+## Look
+
+Trex 2.0 brand, same as the app (`app/docs/design/tokens.md`): "Midnight vault" dark tokens in `tailwind.config.js` (`page`, `raised`, `line`, `ink`, `muted`, `accent`, `spark`), Manrope self-hosted from `src/fonts/`, logo SVGs in `public/brand/` (copied from the app's `assets/brand/`; regenerate there, not by hand), app icon `src/app/icon.png`, social card `public/og-image.png`. App pictures sit in a 9:16 phone frame (`S25UltraMockup`, prop `pos` picks which part of the 540x1176 screenshot to keep).

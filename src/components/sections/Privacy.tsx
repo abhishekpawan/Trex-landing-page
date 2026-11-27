@@ -45,7 +45,7 @@ const groups = [
 
 export default function Privacy() {
   return (
-    <section id="privacy" className="scroll-mt-16 py-16 px-6 bg-[#0B0F1A]">
+    <section id="privacy" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           tag="Privacy"
@@ -61,12 +61,12 @@ export default function Privacy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-[#1F2933]/30 border border-white/10 rounded-3xl p-7"
+              className="bg-raised/30 border border-white/10 rounded-3xl p-7"
             >
-              <div className="w-12 h-12 bg-[#6FAF9E] rounded-xl flex items-center justify-center text-[#0B0F1A] mb-5">{g.icon}</div>
+              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-page mb-5">{g.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2">{g.title}</h3>
-              <p className="text-[#F1F5F9]/70 mb-5 leading-relaxed">{g.lead}</p>
-              <ul className="space-y-3 text-[#F1F5F9]/80 text-[15px] leading-relaxed list-disc pl-5 marker:text-[#6FAF9E]">
+              <p className="text-ink/70 mb-5 leading-relaxed">{g.lead}</p>
+              <ul className="space-y-3 text-ink/80 text-[15px] leading-relaxed list-disc pl-5 marker:text-accent">
                 {g.items.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
@@ -75,12 +75,12 @@ export default function Privacy() {
           ))}
         </div>
 
-        <div className="mt-8 bg-white/5 border border-white/10 rounded-2xl p-6 text-[#F1F5F9]/80 leading-relaxed">
+        <div className="mt-8 bg-white/5 border border-white/10 rounded-2xl p-6 text-ink/80 leading-relaxed">
           <p className="font-semibold text-white mb-1">The trade-off, plainly</p>
           <p>
             If you lose your phone and every copy of your recovery key, nobody can open your backup, and that includes us. We will never add
             a way for us to. You can also use Trex with no backup at all. For the full detail, read the{' '}
-            <Link href="/privacypolicy" className="text-[#6FAF9E] underline underline-offset-4 hover:text-[#88c5b6]">
+            <Link href="/privacypolicy" className="text-accent underline underline-offset-4 hover:text-accent/80">
               privacy policy
             </Link>
             .

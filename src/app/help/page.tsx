@@ -20,7 +20,7 @@ function Pictures({ pics }: { pics: Pic[] }) {
       {pics.map((p) => (
         <figure key={p.src} className="flex-shrink-0 w-[200px] snap-start">
           <Image src={p.src} alt={p.alt} width={720} height={p.h} sizes="200px" className="w-full h-auto rounded-xl border border-white/10" />
-          <figcaption className="text-xs text-[#F1F5F9]/55 mt-2 leading-snug">{p.alt}</figcaption>
+          <figcaption className="text-xs text-ink/55 mt-2 leading-snug">{p.alt}</figcaption>
         </figure>
       ))}
     </div>
@@ -35,10 +35,10 @@ function Route({
 }) {
   return (
     <section id={id} className="scroll-mt-28 border-t border-white/10 pt-10 mt-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#F1F5F9] mb-3">{title}</h2>
-      <p className="text-[#F1F5F9]/80 leading-relaxed mb-4">{lead}</p>
-      <p className="text-sm text-[#F1F5F9]/60 mb-6 leading-relaxed">
-        <span className="font-semibold text-[#6FAF9E]">Checked:</span> {checked}
+      <h2 className="text-2xl md:text-3xl font-bold text-ink mb-3">{title}</h2>
+      <p className="text-ink/80 leading-relaxed mb-4">{lead}</p>
+      <p className="text-sm text-ink/60 mb-6 leading-relaxed">
+        <span className="font-semibold text-accent">Checked:</span> {checked}
         {notChecked && (
           <>
             {' '}
@@ -48,12 +48,12 @@ function Route({
       </p>
       {link && (
         <p className="mb-6">
-          <a href={link.href} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg bg-[#6FAF9E] px-5 py-3 font-semibold text-[#0B0F1A] hover:opacity-90">
+          <a href={link.href} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg bg-accent px-5 py-3 font-semibold text-page hover:opacity-90">
             {link.label}
           </a>
         </p>
       )}
-      <ol className="list-decimal pl-6 space-y-3 text-[#F1F5F9]/85 leading-relaxed marker:text-[#6FAF9E] marker:font-bold">
+      <ol className="list-decimal pl-6 space-y-3 text-ink/85 leading-relaxed marker:text-accent marker:font-bold">
         {steps.map((s, i) => (
           <li key={i}>{s}</li>
         ))}
@@ -64,7 +64,7 @@ function Route({
         </div>
       )}
       <h3 className="text-lg font-semibold text-white mt-8 mb-3">Good to know</h3>
-      <ul className="list-disc pl-6 space-y-2 text-[#F1F5F9]/75 leading-relaxed marker:text-[#6FAF9E]">
+      <ul className="list-disc pl-6 space-y-2 text-ink/75 leading-relaxed marker:text-accent">
         {good.map((g, i) => (
           <li key={i}>{g}</li>
         ))}
@@ -77,45 +77,45 @@ const b = (t: string) => <strong className="text-white">{t}</strong>
 
 export default function Help() {
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#F1F5F9] font-sans selection:bg-[#6FAF9E] selection:text-[#0B0F1A]">
+    <div className="min-h-screen bg-page text-ink font-sans selection:bg-accent selection:text-page">
       <Navbar />
       <main className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] tracking-tighter mb-4">Get your statement</h1>
-            <p className="text-[#F1F5F9]/75 text-lg leading-relaxed mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-ink tracking-tighter mb-4">Get your statement</h1>
+            <p className="text-ink/75 text-lg leading-relaxed mb-4">
               To bring your mutual funds and shares into Trex, you import a statement (CAS). It is a PDF that your fund registrar or
               depository sends you. It lists every fund or share you hold. Trex reads the PDF on your phone. It is never uploaded.
             </p>
-            <p className="text-[#F1F5F9]/75 leading-relaxed mb-8">
+            <p className="text-ink/75 leading-relaxed mb-8">
               The sites below are not ours, and we never see what you type there, such as your PAN or a code sent to your phone. Websites
               change: each section says when we last looked, and the Trex screen still points you to the right site if a button has moved.
             </p>
 
             <nav aria-label="Which statement" className="rounded-2xl border border-white/10 bg-white/5 p-6 mb-4">
               <h2 className="text-lg font-semibold text-white mb-4">Which one should I use?</h2>
-              <ul className="space-y-3 text-[#F1F5F9]/80 leading-relaxed">
+              <ul className="space-y-3 text-ink/80 leading-relaxed">
                 <li>
-                  <strong className="text-white">Funds, first time:</strong> <a href="#cams" className="text-[#6FAF9E] underline underline-offset-4">CAMS</a>. It
+                  <strong className="text-white">Funds, first time:</strong> <a href="#cams" className="text-accent underline underline-offset-4">CAMS</a>. It
                   gives your whole history, from your first purchase, and funds you have sold. It comes by email, from about 15 minutes to a few hours.
                 </li>
                 <li>
-                  <strong className="text-white">Funds, an update:</strong> <a href="#mfcentral" className="text-[#6FAF9E] underline underline-offset-4">MF Central</a>.
+                  <strong className="text-white">Funds, an update:</strong> <a href="#mfcentral" className="text-accent underline underline-offset-4">MF Central</a>.
                   No password to remember, ready in about 30 minutes, but it goes back only to January 2023.
                 </li>
                 <li>
                   <strong className="text-white">Shares and ETFs in a demat account:</strong>{' '}
-                  <a href="#cdsl_email" className="text-[#6FAF9E] underline underline-offset-4">your depository’s monthly email</a>, or download it from{' '}
-                  <a href="#cdsl" className="text-[#6FAF9E] underline underline-offset-4">CDSL</a> or <a href="#nsdl" className="text-[#6FAF9E] underline underline-offset-4">NSDL</a>.
+                  <a href="#cdsl_email" className="text-accent underline underline-offset-4">your depository’s monthly email</a>, or download it from{' '}
+                  <a href="#cdsl" className="text-accent underline underline-offset-4">CDSL</a> or <a href="#nsdl" className="text-accent underline underline-offset-4">NSDL</a>.
                 </li>
               </ul>
-              <p className="text-sm text-[#F1F5F9]/60 mt-4 leading-relaxed">
+              <p className="text-sm text-ink/60 mt-4 leading-relaxed">
                 Passwords: a CAMS statement opens with the password you choose on the form. NSDL and CDSL statements open with your PAN
                 in capital letters. An MF Central statement has no password.
               </p>
             </nav>
 
-            <h2 className="text-xl font-semibold text-[#6FAF9E] mt-12">Mutual funds</h2>
+            <h2 className="text-xl font-semibold text-accent mt-12">Mutual funds</h2>
 
             <Route
               id="cams"
@@ -174,7 +174,7 @@ export default function Help() {
               ]}
             />
 
-            <h2 className="text-xl font-semibold text-[#6FAF9E] mt-16">Shares, ETFs and funds in a demat account</h2>
+            <h2 className="text-xl font-semibold text-accent mt-16">Shares, ETFs and funds in a demat account</h2>
 
             <Route
               id="cdsl_email"
@@ -233,9 +233,9 @@ export default function Help() {
               ]}
             />
 
-            <p className="border-t border-white/10 mt-16 pt-8 text-sm text-[#F1F5F9]/60 leading-relaxed">
-              Pictures are real screens with personal details covered. Questions? Read the <Link href="/#faq" className="text-[#6FAF9E] underline underline-offset-4">FAQ</Link>{' '}
-              or the <Link href="/privacypolicy" className="text-[#6FAF9E] underline underline-offset-4">privacy policy</Link>.
+            <p className="border-t border-white/10 mt-16 pt-8 text-sm text-ink/60 leading-relaxed">
+              Pictures are real screens with personal details covered. Questions? Read the <Link href="/#faq" className="text-accent underline underline-offset-4">FAQ</Link>{' '}
+              or the <Link href="/privacypolicy" className="text-accent underline underline-offset-4">privacy policy</Link>.
             </p>
           </div>
         </div>

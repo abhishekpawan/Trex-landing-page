@@ -11,9 +11,9 @@ export default function CTA() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="max-w-5xl mx-auto bg-gradient-to-br from-[#1F2933] to-[#0B0F1A] rounded-[32px] md:rounded-[48px] p-8 sm:p-12 md:p-20 text-center relative border border-white/10 overflow-hidden"
+        className="max-w-5xl mx-auto bg-gradient-to-br from-raised to-page rounded-[32px] md:rounded-[48px] p-8 sm:p-12 md:p-20 text-center relative border border-white/10 overflow-hidden"
       >
-        <div className="absolute top-0 right-0 w-80 h-80 bg-[#6FAF9E]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px] pointer-events-none"></div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tighter mb-6 leading-tight">
           Every FD, in one place you own.
         </h2>

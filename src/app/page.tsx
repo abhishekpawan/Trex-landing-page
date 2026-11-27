@@ -21,7 +21,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#F1F5F9] font-sans selection:bg-[#6FAF9E] selection:text-[#0B0F1A]">
+    <div className="min-h-screen bg-page text-ink font-sans selection:bg-accent selection:text-page">
       <Navbar />
       <main>
         <Hero />

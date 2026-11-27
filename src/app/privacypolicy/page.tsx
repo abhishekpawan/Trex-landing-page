@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/privacypolicy' },
 }
 
-const a = 'text-[#6FAF9E] underline underline-offset-4 hover:text-[#88c5b6]'
+const a = 'text-accent underline underline-offset-4 hover:text-accent/80'
 
 export default function PrivacyPolicy() {
   return (

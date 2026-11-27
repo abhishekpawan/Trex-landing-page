@@ -27,7 +27,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="scroll-mt-16 py-16 px-6 bg-[#0B0F1A]">
+    <section id="how-it-works" className="scroll-mt-16 py-16 px-6 bg-page">
       <div className="max-w-6xl mx-auto">
         <SectionHeading tag="How it works" title="Three steps, no bank link" subtitle="Nothing to connect, nothing to sign in to. You can start in a minute." />
         <div className="grid md:grid-cols-3 gap-6">
@@ -38,14 +38,14 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12 }}
-              className="bg-[#1F2933]/30 p-8 rounded-3xl border border-white/5 relative overflow-hidden"
+              className="bg-raised/30 p-8 rounded-3xl border border-white/5 relative overflow-hidden"
             >
               <span className="absolute top-3 right-5 text-7xl font-black text-white/[0.05]" aria-hidden="true">
                 {s.num}
               </span>
-              <div className="w-12 h-12 bg-[#6FAF9E] rounded-xl flex items-center justify-center text-[#0B0F1A] mb-5">{s.icon}</div>
+              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-page mb-5">{s.icon}</div>
               <h3 className="text-xl font-bold text-white mb-3">{s.title}</h3>
-              <p className="text-[#F1F5F9]/70 leading-relaxed">{s.desc}</p>
+              <p className="text-ink/70 leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

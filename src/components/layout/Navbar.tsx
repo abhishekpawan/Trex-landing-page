@@ -41,21 +41,15 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[#0B0F1A]/80 backdrop-blur-xl border-b border-white/5 py-1' : 'bg-transparent py-3'}`}>
+      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-page/80 backdrop-blur-xl border-b border-white/5 py-1' : 'bg-transparent py-3'}`}>
         <div className="max-w-7xl mx-auto px-6 xl:px-0 flex justify-between items-center">
           <Link href="/" className="flex items-center" aria-label="Trex home">
-            <Image 
-              src="/logos/Trex-icon-text-logo-side-by-side.png" 
-              alt="Trex" 
-              width={140} 
-              height={80}
-              priority
-            />
+            <Image unoptimized priority src="/brand/trex-lockup-on-dark.svg" alt="Trex" width={116} height={40} className="h-10 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="text-[#F1F5F9]/75 hover:text-[#6FAF9E] transition-colors">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="text-ink/75 hover:text-accent transition-colors">{l.label}</Link>
             ))}
             <a href={PLAY_LIVE ? PLAY_URL : '/#pre-register'}>
               <Button className="px-5 py-2">
@@ -65,7 +59,7 @@ export default function Navbar() {
           </div>
 
           <button 
-            className="md:hidden text-[#F1F5F9]" 
+            className="md:hidden text-ink" 
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
@@ -82,7 +76,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-[#0B0F1A] border-b border-white/5 px-6 py-8 flex flex-col gap-4 overflow-hidden"
+              className="md:hidden bg-page border-b border-white/5 px-6 py-8 flex flex-col gap-4 overflow-hidden"
             >
               {LINKS.map((l) => (
                 <Link key={l.href} href={l.href} className="text-lg font-medium text-white" onClick={() => setIsOpen(false)}>{l.label}</Link>
