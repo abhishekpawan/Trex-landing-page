@@ -79,7 +79,7 @@ export async function POST(request: Request) {
     const res = await fetch('https://api.buttondown.com/v1/subscribers', {
       method: 'POST',
       headers: { Authorization: `Token ${apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email_address: email, tags: ['waitlist'], ...(ip ? { ip_address: ip } : {}) }),
+      body: JSON.stringify({ email_address: email, ...(ip ? { ip_address: ip } : {}) }),
     })
     if (res.ok) {
       await notifyTelegram(email)
