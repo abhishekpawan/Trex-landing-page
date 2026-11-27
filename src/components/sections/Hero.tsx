@@ -14,7 +14,7 @@ export default function Hero() {
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-accent text-sm font-bold mb-6 border border-accent/20">
             <Lock size={14} />
-            FD tracker for Android, made in India
+            FD tracker, made in India
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-[1.05] mb-6">
             Know where every FD stands.{' '}
@@ -25,8 +25,8 @@ export default function Hero() {
             holds more than the ₹5 lakh insurance covers. Add your PPF, EPF, mutual funds and stocks too.
           </p>
 
-          <div className="max-w-xl mb-6" id="pre-register">
-            <GetTrex source="hero" />
+          <div className="max-w-xl mb-6" id="get-trex">
+            <GetTrex />
           </div>
 
           <ul className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-ink/60">

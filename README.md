@@ -4,7 +4,7 @@ A modern, privacy-first wealth tracking landing page built with Next.js 14, Type
 
 ## What it is
 
-trexfolio.com for Trex 2.0: an FD-first, privacy-first portfolio tracker for Android in India. Read `TREX_LANDING_PAGE_CONTEXT.md` before changing any text (every sentence rests on the app repo's `docs/marketing/claims.md`).
+trexfolio.com for Trex 2.0: an FD-first, privacy-first portfolio tracker for India. Read `TREX_LANDING_PAGE_CONTEXT.md` before changing any text (every sentence rests on the app repo's `docs/marketing/claims.md`).
 
 ## Getting Started
 
@@ -37,8 +37,8 @@ src/
 ├── components/
 │   ├── layout/          # Navbar, Footer, LegalPage
 │   ├── sections/        # Hero, Features, More, Privacy, Plans, HowItWorks, FAQ, CTA
-│   └── ui/              # Button, GetTrex (waitlist or Play button), PlayBadge, PreRegisterForm, S25UltraMockup, SectionHeading
-└── lib/                 # site.ts (constants and the release-day switch), api.ts (waitlist), rateLimit.ts
+│   └── ui/              # Button, GetTrex (Play and App Store buttons, "Coming soon" pop-up), PlayBadge, S25UltraMockup, SectionHeading
+└── lib/                 # site.ts (constants and the release-day switch)
 public/screens/          # app pictures (made-up data); public/help/ = statement help pictures
 ```
 

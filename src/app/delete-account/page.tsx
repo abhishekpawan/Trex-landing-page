@@ -33,7 +33,7 @@ export default function DeleteAccount() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-ink tracking-tighter mb-4">Delete your Trex account</h1>
             <p className="text-ink/70 text-lg">
-              Trex is a portfolio tracker by Novarex Studios (Android app <span className="font-mono">com.novarex.trex</span>).
+              Trex is a portfolio tracker by Novarex Studios (app <span className="font-mono">com.novarex.trex</span>).
               You can delete your account and everything our server holds for it at any time.
             </p>
 

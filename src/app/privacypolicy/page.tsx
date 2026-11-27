@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       intro={
         <>
           <p>
-            Trex is an Android app by Novarex Studios, India (“we”, “us”). It helps you see your investments in one place. This policy
+            Trex is an app by Novarex Studios, India (“we”, “us”). It helps you see your investments in one place. This policy
             says what Trex keeps on your phone, what leaves it, who can see it and how to delete it.
           </p>
           <p>
@@ -118,17 +118,10 @@ export default function PrivacyPolicy() {
           </p>
         </Sub>
 
-        <Sub title="Getting the Google Play link by email">
+        <Sub title="An earlier waiting list">
           <p>
-            If you leave your email on this website to get the Google Play link, the address is held by Buttondown, the email service we use for
-            this list. It does one job: it sends you one mail to confirm the address (nothing is sent to you until you tap the link) and
-            then the mail with the link. Every mail has an unsubscribe link. We delete the address if you ask, and we use it
-            for nothing else. A few addresses left on this website before November 2026 are kept on our own server for the same one
-            purpose.
-          </p>
-          <p>
-            When someone joins the list, a message in our team chat on Telegram shows the address with most of it hidden (for example
-            “ab•••@gmail.com”), so we know the form works.
+            Before November 2026 a few people left their email address on this website to get the app. Those addresses are kept on our own
+            server, for that one purpose only. We delete yours if you ask: write to the address at the end of this page.
           </p>
         </Sub>
 

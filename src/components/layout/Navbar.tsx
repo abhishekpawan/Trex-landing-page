@@ -6,7 +6,6 @@ import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
-import { PLAY_LIVE, PLAY_URL } from '@/lib/site'
 
 const LINKS = [
   { href: '/#features', label: 'Features' },
@@ -51,9 +50,9 @@ export default function Navbar() {
             {LINKS.map((l) => (
               <Link key={l.href} href={l.href} className="text-ink/75 hover:text-accent transition-colors">{l.label}</Link>
             ))}
-            <a href={PLAY_LIVE ? PLAY_URL : '/#pre-register'}>
+            <a href="/#get-trex">
               <Button className="px-5 py-2">
-                {PLAY_LIVE ? 'Get it on Google Play' : 'Get Trex'}
+                Get the app
               </Button>
             </a>
           </div>
@@ -82,9 +81,9 @@ export default function Navbar() {
                 <Link key={l.href} href={l.href} className="text-lg font-medium text-white" onClick={() => setIsOpen(false)}>{l.label}</Link>
               ))}
               <hr className="border-white/10" />
-              <a href={PLAY_LIVE ? PLAY_URL : '/#pre-register'}>
+              <a href="/#get-trex">
                 <Button onClick={() => setIsOpen(false)} className="w-full">
-                  {PLAY_LIVE ? 'Get it on Google Play' : 'Get Trex'}
+                  Get the app
                 </Button>
               </a>
             </motion.div>

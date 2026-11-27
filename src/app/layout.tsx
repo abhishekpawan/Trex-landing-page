@@ -61,7 +61,7 @@ export default function RootLayout({
     '@type': 'SoftwareApplication',
     name: 'Trex',
     applicationCategory: 'FinanceApplication',
-    operatingSystem: 'Android',
+    operatingSystem: 'Android, iOS',
     description: siteDescription,
     offers: {
       '@type': 'Offer',

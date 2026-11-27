@@ -17,11 +17,11 @@ export default function CTA() {
           Bring all your FDs together.
         </h2>
         <p className="text-white/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-          Free for Android. No sign-up, no bank login. Add your first FD and see the whole picture.
+          Free to use. No sign-up, no bank login. Add your first FD and see the whole picture.
         </p>
         <div className="max-w-2xl mx-auto flex justify-center text-left">
           <div className="w-full max-w-xl">
-            <GetTrex source="cta" />
+            <GetTrex align="center" />
           </div>
         </div>
       </motion.div>

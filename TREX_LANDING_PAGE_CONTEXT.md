@@ -12,17 +12,13 @@ Rewritten by WP-LAND, 2026-11-26. The old document described the 1.0.4 site (man
 ## Hosting and deploy
 
 - Netlify (site `trexfolio`, team Novarex Studio), Next.js runtime, linked to `github.com/abhishekpawan/Trex-landing-page`. Production branch `main`: **a push to `main` deploys the live site.** Branch deploys are off; a pull request against `main` makes a Deploy Preview. Build: `pnpm run build`, Node 22.
-- Work happens on branch `v2`. Merge to `main` only on release day, with Abhishek's OK.
+- Work on a branch and open a PR (Netlify builds a Deploy Preview); a push or merge to `main` deploys trexfolio.com.
 
-## Release day switch
+## Get the app buttons (no waitlist)
 
-`NEXT_PUBLIC_PLAY_LIVE=true` (Netlify environment variable, then redeploy) shows the Google Play button and hides the waitlist form (`src/lib/site.ts`, `components/ui/GetTrex.tsx`, the Navbar). Store link: `https://play.google.com/store/apps/details?id=com.novarex.trex`.
+`components/ui/GetTrex.tsx` shows the Google Play and App Store buttons (hero and bottom call to action; the navbar button scrolls to the hero ones). **The App Store button opens a "Coming soon" pop-up.** Until release day the Google Play button opens the same pop-up. Release day: `NEXT_PUBLIC_PLAY_LIVE=true` (Netlify environment variable, then redeploy) turns the Play button into the real link: `https://play.google.com/store/apps/details?id=com.novarex.trex`. When the App Store listing exists, add its link in `src/lib/site.ts` and make the App Store button a link in `GetTrex.tsx`. The page never says the app is Android-only, or "coming soon", in text; only the pop-up does.
 
-## Waitlist
-
-The form posts to this site's own route, `src/app/api/waitlist/route.ts` (honeypot field `website`, email check, "already on the list" answered as success). It adds the address to **Buttondown** (Trex's own free account and list, double opt-in; no tags, they are a paid add-on) and then pings the "Novarex Service Requests" Telegram group through the Trex bot with the masked address only ("ab•••@gmail.com"); a failed ping never fails the signup.
-
-Netlify environment variables (all secret, set by hand, never in git): `BUTTONDOWN_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`. Tests: `TELEGRAM_DRY_RUN=1` logs the ping instead of sending it; `BUTTONDOWN_DRY_RUN=1` skips Buttondown. The 5 older sign-ups stay in `public.waitlist_registrations` on the Trex server (the old cloud Supabase address no longer exists).
+**No waitlist.** The Buttondown and Telegram waitlist built on 2026-11-27 was removed the same day (Abhishek: the launch is close, no list). The 5 older sign-ups stay in `public.waitlist_registrations` on the Trex server; the policy has a short "An earlier waiting list" paragraph for them.
 
 ## Pages
 
