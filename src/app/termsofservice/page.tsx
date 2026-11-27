@@ -18,7 +18,7 @@ export default function TermsOfService() {
       updated={`For Trex 2.0 · Last updated ${PRIVACY_UPDATED}`}
       intro={
         <p>
-          These terms cover your use of the Trex Android app (“the App”), run by Novarex Studios, India (“we”, “us”). By using the App
+          These terms cover your use of the Trex app (“the App”), run by Novarex Studios, India (“we”, “us”). By using the App
           you agree to them. Our{' '}
           <Link href="/privacypolicy" className={a}>
             Privacy Policy

@@ -9,7 +9,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'What is Trex?',
     answer:
-      'Trex is a free Android app for keeping track of your money in India. It starts with your fixed deposits: every FD from every bank in one place, with maturity dates, interest, tax and the ₹5 lakh deposit-insurance limit. You can add your RD, PPF, EPF, NPS, gold, mutual funds and stocks too, and see your net worth.',
+      'Trex is a free app for keeping track of your money in India. It starts with your fixed deposits: every FD from every bank in one place, with maturity dates, interest, tax and the ₹5 lakh deposit-insurance limit. You can add your RD, PPF, EPF, NPS, gold, mutual funds and stocks too, and see your net worth.',
   },
   {
     question: 'How do I track all my FDs in one place?',
@@ -77,7 +77,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'Yes, anonymous usage stats, on by default, with one tap in Settings to turn them off. They carry a random ID made on your phone, screen and button names, a rough holdings range (1-5, 6-20 or 21+), the app version and the phone model. Never amounts, names, banks or exact counts.',
   },
   {
-    question: 'Who makes Trex, and is it on iPhone?',
-    answer: 'Novarex Studios, in India. Trex is for Android phones and for people in India for now.',
+    question: 'Who makes Trex?',
+    answer: 'Novarex Studios, in India. Trex is made for people in India and works in rupees.',
   },
 ]
